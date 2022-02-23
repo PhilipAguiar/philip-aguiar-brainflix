@@ -1,0 +1,168 @@
+// Screen size breakpoints
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+//   mobile specific styles
+
+@mixin body-copy-mobile {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@mixin subheader-mobile {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+@mixin page-header-mobile {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+// Tablet and desktop styles
+
+@mixin labels-buttons {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+@mixin body-copy {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin subheader {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+@mixin section-header {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+@mixin page-header {
+  font-size: 33px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+// Site padding
+
+@mixin site-padding-mobile {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@mixin site-padding-tablet {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+@mixin site-padding-desktop {
+}
+
+@mixin component-padding-mobile {
+  padding-bottom: 16px;
+}
+
+@mixin component-padding {
+  padding-bottom: 24px;
+}
+
+@mixin heading-padding-mobile {
+  @include component-padding-mobile;
+  padding-top: 36px;
+}
+
+@mixin heading-padding {
+  @include component-padding;
+  padding-top: 36px;
+}
+
+// border radius
+
+@mixin default-border-radius {
+  border-radius: 4px;
+}
+
+// logo
+
+@mixin logo-styling {
+  max-height: 25px;
+  max-weight: 120px;
+}
+
+// button
+
+@mixin button-styling {
+  @include default-border-radius;
+  padding-left: 32px;
+  padding-right: 32px;
+  min-weight: 150px;
+  background-color: $primary-color;
+  color: $primary-light;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+// form fields
+
+@mixin form-styling {
+  @include default-border-radius;
+  outline: none;
+  border: 1px solid $secondary-neutral;
+  min-height: 36px;
+  min-width: 240px;
+  max-width: 100%;
+  padding: 12px;
+
+  @include tablet {
+    min-height: 40px;
+    padding: 16px;
+  }
+  &:active {
+    border: 2px solid $primary-color;
+  }
+}
+
+@mixin form-error-styling {
+  border: 2px solid #d22d2d;
+}
+
+// Divider
+
+@mixin divider-styling {
+  border-bottom: 1px solid $secondary-neutral;
+}
+
+// Avatar styling
+
+@mixin avatar-styling {
+  border-radius: 50%;
+  max-width: 36px;
+  max-height: 36px;
+  background-color: $secondary-neutral;
+
+  @include tablet {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
