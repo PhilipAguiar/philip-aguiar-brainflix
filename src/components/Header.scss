@@ -1,14 +1,26 @@
-.header{
-    &__logo{
+@use "../styles/partials/mixins" as *;
 
+.header{
+    @include component-padding-mobile;
+    @include site-padding-mobile;
+    display: flex;
+    flex-direction: column;
+
+
+    &__logo{
+        @include logo-styling
+    }
+
+    &__search{
+        
     }
     &__input{
-        
+        @include form-styling
     }
     &__avatar{
-        
+        @include avatar-styling
     }
     &__button{
-        
+        @include button-styling
     }
 }
