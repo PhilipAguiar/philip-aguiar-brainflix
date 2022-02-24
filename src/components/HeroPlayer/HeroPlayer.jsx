@@ -4,14 +4,14 @@ import CommentList from "../CommentList/CommentList";
 import VideoDescription from "../VideoDescription/VideoDescription";
 import "./HeroPlayer.scss";
 
-function HeroPlayer(props) {
-  console.log(props.video);
+function HeroPlayer({video}) {
+  console.log(video);
   return (
     <>
-      <video className="hero__player" poster={props.video.image} controls></video>
-      <VideoDescription video = {props.video}/>
-      <CommentForm video = {props.video}/>
-      <CommentList comments = {props.video.comments}/>
+      <video className="hero__player" poster={video.image} controls></video>
+      <VideoDescription video = {video}/>
+      <CommentForm video = {video}/>
+      <CommentList comments = {video.comments}/>
     </>
   );
 }
