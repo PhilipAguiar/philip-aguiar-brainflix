@@ -1,7 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/colors" as *;
 
-.comments {
+.post {
   @include site-padding-mobile;
   @include component-padding-mobile;
   @include divider-styling;
