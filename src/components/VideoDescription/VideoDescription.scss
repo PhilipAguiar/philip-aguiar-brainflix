@@ -50,4 +50,9 @@
       color: $primary-dark;
     }
   }
+  &__text{
+    @include component-padding;
+    @include body-copy-mobile;
+    padding-top: 1rem;
+  }
 }

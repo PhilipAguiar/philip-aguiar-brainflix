@@ -24,6 +24,7 @@ function VideoDescription(props) {
           </div>
         </div>
       </div>
+      <p className="description__text">{props.video.description}</p>
     </div>
   );
 }
