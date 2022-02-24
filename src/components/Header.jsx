@@ -7,8 +7,9 @@ function Header() {
     <section className="header">
       <img className="header__logo" src={logo} alt="" />
       <div className="header__search">
-        <input className="header__input" type="text" />
-        <img className="header__avatar" src={avatar} alt="" />
+        <input className="header__input" type="text" placeholder="Search"/>
+        {/* <img className="header__avatar" src={avatar} alt="" /> */}
+        <div className="header__avatar"></div>
       </div>
       <button className="header__button">UPLOAD</button>
     </section>
