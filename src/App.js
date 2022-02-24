@@ -11,11 +11,12 @@ class App extends React.Component {
     videoList:videoListJSON
   }
 
+  
   render() {
     return (
       <>
         <Header />
-        <HeroPlayer videoList={this.state.videoList} />
+        <HeroPlayer video={this.state.videoList[0]} />
       </>
     );
   }

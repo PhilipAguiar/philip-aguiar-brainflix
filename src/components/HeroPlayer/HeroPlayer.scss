@@ -1,6 +1,6 @@
-.hero{
-
-    &__player{
-        max-width:100%
-    }
+@use "../../styles/partials/mixins" as *;
+.hero {
+  &__player {
+    max-width: 100%;
+  }
 }

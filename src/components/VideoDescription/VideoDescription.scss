@@ -1,0 +1,53 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+
+.description {
+  @include site-padding-mobile;
+  &__title {
+    @include divider-styling;
+    @include page-header-mobile;
+    @include heading-padding-mobile;
+  }
+
+  &__container {
+    @include divider-styling;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &--right {
+      padding-right: 2rem;
+    }
+  }
+  &__channel {
+  }
+  &__stats-wrapper {
+    display: flex;
+    &--bottom {
+      padding-top: 1rem;
+    }
+  }
+
+  &__icon {
+    padding-right: 0.5rem;
+  }
+  &__stat {
+    @include body-copy-mobile;
+    color: $primary-neutral;
+
+    &--bottom {
+      padding-top: 1rem;
+    }
+
+    &--bold {
+      color: $primary-dark;
+    }
+  }
+}
