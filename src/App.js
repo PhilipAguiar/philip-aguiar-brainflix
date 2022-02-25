@@ -14,7 +14,9 @@ class App extends React.Component {
   };
 
   clickedVideo = (event) => {
-    console.log(event.target)
+    
+      console.log(event.currentTarget.id);
+    
   };
 
   render() {
