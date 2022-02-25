@@ -9,15 +9,20 @@ import VideoList from "./components/VideoList/VideoList";
 class App extends React.Component {
   state = {
     videoList: videoListDetailed,
-    simpleVideoList:  videoListSimple
+    simpleVideoList: videoListSimple,
+    clickedVideo: videoListDetailed[0],
+  };
+
+  clickedVideo = (event) => {
+    console.log(event.target)
   };
 
   render() {
     return (
       <>
         <Header />
-        <ActiveVideo video={this.state.videoList[0]} />
-        <VideoList videoList={videoListSimple}/>
+        <ActiveVideo video={this.state.clickedVideo} />
+        <VideoList videoList={videoListSimple} clickedVideo={this.clickedVideo} />
       </>
     );
   }

@@ -1,8 +1,8 @@
 import './VideoItem.scss'
 
-function VideoItem({video}) {
+function VideoItem({video , clickedVideo}) {
   return (
-    <div>
+    <div onClick={clickedVideo}>
         <img src={video.image} alt="" />
         <h3>{video.title}</h3>
         <p>{video.channel}</p>
