@@ -5,8 +5,13 @@
     padding: 8px 0;;
     height: 20vw;
     display: flex;
+
+    @include tablet{
+        height: 10vw;
+    }
     &__image-wrapper{
         width: 40%;
+        
         
     }
     &__text-wrapper{
@@ -21,12 +26,21 @@
         border-radius: .4rem;;
         height: 100%;
         width: 100%;
+
+        
     }
     &__title{
        font-size: .8rem;
+       @include tablet{
+        font-size: .9rem;
+    }
     }
     &__channel{
         padding-bottom: .2rem;
         font-size: .8rem;
+
+        @include tablet{
+            font-size: 1rem;
+        }
     }
 }

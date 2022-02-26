@@ -10,6 +10,7 @@
 
   @include tablet {
     @include component-padding;
+    @include site-padding-tablet;
     padding-top: 24px;
   }
 

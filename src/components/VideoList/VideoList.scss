@@ -3,6 +3,11 @@
 
 .next-videos{
     @include site-padding-mobile;
+
+    @include tablet {
+        @include site-padding-tablet;
+        width: 40%
+    }
     &__title{
         @include heading-padding-mobile;
         color: $primary-neutral
