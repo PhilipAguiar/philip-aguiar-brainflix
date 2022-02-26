@@ -24,8 +24,10 @@ class App extends React.Component {
   };
 
   render() {
-    const { title,image,timestamp,channel,views,likes,description,comments  } = this.state.clickedVideo;
-    console.log(title)
+    const { title,image,timestamp,channel,views,likes,description,comments} = this.state.clickedVideo;
+    const filteredVideoList = this.state.simpleVideoList.filter((video)=>{
+      return video.id !== this.state.clickedVideo.id;
+    })
     return (
       <>
         <Header />
@@ -39,7 +41,7 @@ class App extends React.Component {
         description = {description}
         comments= {comments}
         />
-        <VideoList videoList={videoListSimple} clickedVideo={this.clickedVideo} />
+        <VideoList videoList={filteredVideoList} clickedVideo={this.clickedVideo} />
       </>
     );
   }
