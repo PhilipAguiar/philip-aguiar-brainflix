@@ -7,7 +7,7 @@
   &__title {
     @include divider-styling;
     @include page-header-mobile;
-    @include heading-padding-mobile;
+    padding: 16px 0;
   }
 
   &__container {
