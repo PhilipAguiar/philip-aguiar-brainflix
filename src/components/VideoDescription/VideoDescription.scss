@@ -4,10 +4,18 @@
 
 .description {
   @include site-padding-mobile;
+
+  @include tablet {
+    @include site-padding-tablet;
+  }
   &__title {
     @include divider-styling;
     @include page-header-mobile;
     padding: 16px 0;
+
+    @include tablet {
+      border: none;
+    }
   }
 
   &__container {
@@ -16,6 +24,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include tablet {
+      padding: 0 0 8px 0;
+    }
   }
   &__info-wrapper {
     display: flex;
@@ -24,6 +36,14 @@
 
     &--right {
       padding-right: 2rem;
+      @include tablet {
+       padding: 0;
+      }
+    }
+
+    @include tablet {
+      flex-direction: row;
+      
     }
   }
   &__channel {
@@ -32,6 +52,9 @@
     display: flex;
     &--bottom {
       padding-top: 1rem;
+      @include tablet {
+        padding: 0;
+       }
     }
   }
 
@@ -42,15 +65,32 @@
     @include body-copy-mobile;
     color: $primary-neutral;
 
+    @include tablet {
+      padding: 0;
+    }
+
     &--bottom {
       padding-top: 1rem;
+
+      @include tablet {
+       padding: 0;
+      }
     }
 
     &--bold {
       color: $primary-dark;
     }
+
+    &--tablet {
+      @include tablet{
+        padding-right: 3rem
+      }
+    }
+    
+
+
   }
-  &__text{
+  &__text {
     @include component-padding;
     @include body-copy-mobile;
     padding-top: 1rem;
