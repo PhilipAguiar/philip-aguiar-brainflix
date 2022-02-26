@@ -5,9 +5,13 @@
   @include site-padding-mobile;
   @include component-padding-mobile;
   @include divider-styling;
-  padding-top: 16px;;
+  padding-top: 16px;
   display: flex;
-//   flex-direction: column;
+
+  @include tablet {
+    @include component-padding;
+    padding-top: 24px;
+  }
 
   &__image-container {
     display: flex;
@@ -19,11 +23,8 @@
   }
 
   &__image {
-   background-color: $secondary-neutral;
-    height: 2.25rem;
-    width: 2.25rem;
-    border-radius: 50%;
-    margin-bottom: 0.2rem;
+    @include avatar-styling;
+  
     
   }
 
