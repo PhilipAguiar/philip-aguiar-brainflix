@@ -1,3 +1,32 @@
-img{
-    max-height: 5rem;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+.videoItem {
+    padding: 8px 0;;
+    height: 20vw;
+    display: flex;
+    &__image-wrapper{
+        width: 40%;
+        
+    }
+    &__text-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 60%;
+        padding-left: 1rem;
+        text-overflow:ellipsis;
+    }
+    &__image{
+        border-radius: .4rem;;
+        height: 100%;
+        width: 100%;
+    }
+    &__title{
+       font-size: .8rem;
+    }
+    &__channel{
+        padding-bottom: .2rem;
+        font-size: .8rem;
+    }
 }
