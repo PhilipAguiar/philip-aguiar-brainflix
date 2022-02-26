@@ -1,6 +1,7 @@
 import "./CommentForm.scss";
+import comment from "../../assets/Images/add_comment.svg";
 
-function CommentForm({comments}) {
+function CommentForm({ comments }) {
   return (
     <section className="post">
       <h5 className="post__count">{comments.length} Comments</h5>
@@ -11,7 +12,10 @@ function CommentForm({comments}) {
         <form className="post__form">
           <label className="post__label">Join the Conversation</label>
           <textarea name="comment" className="post__input" placeholder="Add a new comment"></textarea>
-          <button className="post__button">COMMENT</button>
+          <button className="post__button">
+            <img className="post__button-image" src={comment} alt="" />
+            <p>COMMENT</p>
+          </button>
         </form>
       </div>
     </section>

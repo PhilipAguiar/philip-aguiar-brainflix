@@ -36,10 +36,22 @@
   }
   &__button {
     @include button-styling;
-    background-image: url(../../assets/Images/upload.svg);
-    background-repeat: no-repeat;
-    background-position: 10px 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     font-weight: 700;
     padding: 1rem 0;
+  }
+
+  &__button-container{
+  }
+
+  &__upload{
+    position: absolute;
+    left: 10px;
+  }
+  &__button-text{
+   
   }
 }

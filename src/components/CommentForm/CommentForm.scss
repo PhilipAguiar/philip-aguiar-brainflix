@@ -5,6 +5,7 @@
   @include site-padding-mobile;
   @include component-padding-mobile;
   @include divider-styling;
+  
   &__count {
     @include component-padding-mobile;
     font-weight: 700;
@@ -12,7 +13,6 @@
   &__wrapper {
     
     display: flex;
-    justify-content: space-between;
     width: 100%;
   }
 
@@ -70,11 +70,15 @@
 
   &__button {
     @include button-styling;
-    background-image: url(../../assets/Images/add_comment.svg);
-    background-repeat: no-repeat;
-    background-position: 10px 10px;
-    background-size: 8%;
-    padding: .6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem 0;
     font-weight: 700;
+  }
+  &__button-image{
+    position: absolute;
+    left: 10px;
   }
 }
