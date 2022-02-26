@@ -1,0 +1,47 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+.comment {
+  @include site-padding-mobile;
+  @include component-padding-mobile;
+  @include divider-styling;
+  padding-top: 16px;;
+  display: flex;
+//   flex-direction: column;
+
+  &__image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0.8rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__image {
+   background-color: $secondary-neutral;
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 50%;
+    margin-bottom: 0.2rem;
+    
+  }
+
+  &__info-container {
+    width: 80%;
+  }
+
+  &__user-wrapper {
+    @include component-padding-mobile;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  &__name {
+    font-weight: 700;
+    color: $primary-dark;
+  }
+  &__date {
+    color: $primary-neutral;
+  }
+}
