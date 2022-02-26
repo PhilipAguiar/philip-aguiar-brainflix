@@ -94,5 +94,10 @@
     @include component-padding;
     @include body-copy-mobile;
     padding-top: 1rem;
+
+    @include tablet {
+      @include body-copy;
+      padding-right: 2%;
+    }
   }
 }
