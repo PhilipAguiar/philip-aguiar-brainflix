@@ -117,10 +117,13 @@
   @include default-border-radius;
   padding-left: 32px;
   padding-right: 32px;
-  min-weight: 150px;
   background-color: $primary-color;
   color: $primary-light;
   border: 0;
+
+  @include tablet{
+    min-width: 150px;
+  }
 
   &:hover {
     background-color: $secondary-color;
@@ -134,7 +137,6 @@
   outline: none;
   border: 1px solid $secondary-neutral;
   min-height: 36px;
-  min-width: 240px;
   max-width: 100%;
   padding: 12px;
 
