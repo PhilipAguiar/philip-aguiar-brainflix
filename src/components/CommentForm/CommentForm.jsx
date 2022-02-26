@@ -10,12 +10,16 @@ function CommentForm({ comments }) {
           <div className="post__image"></div>
         </div>
         <form className="post__form">
-          <label className="post__label">Join the Conversation</label>
-          <textarea name="comment" className="post__input" placeholder="Add a new comment"></textarea>
-          <button className="post__button">
-            <img className="post__button-image" src={comment} alt="" />
-            <p>COMMENT</p>
-          </button>
+          <label className="post__label" htmlFor="comment">
+            Join the Conversation
+          </label>
+          <div className="post__comment-wrapper">
+            <textarea name="comment" className="post__input" placeholder="Add a new comment"></textarea>
+            <button className="post__button">
+              <img className="post__button-image" src={comment} alt="" />
+              <p>COMMENT</p>
+            </button>
+          </div>
         </form>
       </div>
     </section>

@@ -5,15 +5,18 @@
   @include site-padding-mobile;
   @include component-padding-mobile;
   @include divider-styling;
-  
+
   &__count {
     @include component-padding-mobile;
     font-weight: 700;
   }
   &__wrapper {
-    
     display: flex;
     width: 100%;
+
+    @include tablet {
+      justify-content: space-between;
+    }
   }
 
   &__image-container {
@@ -38,11 +41,14 @@
   }
 
   &__form {
-    width: 80%;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
     width: 90%;
+
+    @include tablet {
+      width: 100%
+    }
   }
 
   &__label {
@@ -52,10 +58,19 @@
     font-weight: 600;
   }
 
+  &__comment-wrapper {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      height: 40px;
+    }
+  }
+
   &__input {
     outline: none;
     box-sizing: border-box;
     min-height: 30vw;
+    width: 100%;
     resize: none;
     margin-bottom: 1rem;
     background-color: $secondary-light;
@@ -63,21 +78,31 @@
     border: 1px $secondary-neutral solid;
     border-radius: 4px;
 
+    @include tablet {
+      min-height: 100%;
+    }
+
     &::placeholder {
-        color: $primary-dark;
-      }
+      color: $primary-dark;
+    }
   }
 
   &__button {
     @include button-styling;
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     position: relative;
     padding: 1rem 0;
     font-weight: 700;
+
+    @include tablet {
+      width: 20%;
+      margin-left: 3%;
+    }
   }
-  &__button-image{
+  &__button-image {
     position: absolute;
     left: 10px;
   }
