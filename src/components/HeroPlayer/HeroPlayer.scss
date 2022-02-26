@@ -1,7 +1,13 @@
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
 .hero {
   &__player {
     max-height: 70vw;
     width: 100%;
+
+    @include tablet{
+      background-color: $secondary-dark;
+      max-height: 50vw;;
+    }
   }
 }
