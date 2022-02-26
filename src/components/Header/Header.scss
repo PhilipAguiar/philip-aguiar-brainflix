@@ -22,9 +22,11 @@
     background-image: url(../../assets/Images/search.svg);
     background-repeat: no-repeat;
     background-position: 10px 10px;
-    width: 90%;
+    min-width: 70%;
+    width: 100%;
     padding: 0 0 0 2.2rem;
     max-height: 1rem;
+    margin-right: 1rem
   }
   &__avatar {
     @include avatar-styling;
@@ -32,7 +34,7 @@
     background-position: center;
     background-position-x: -5px;
     background-image: url(../../assets/Images/Mohan-muruge.jpg);
-    margin-left: 1rem
+    
   }
   &__button {
     @include button-styling;
