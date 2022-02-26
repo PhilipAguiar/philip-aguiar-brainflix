@@ -1,13 +1,13 @@
 import "./CommentItem.scss"
 
-function CommentItem(props) {
-    console.log(props.comment)
+function CommentItem({comment}) {
+    console.log(comment)
   return (
     <div>
-        <p>{props.comment.name}</p>
-        <p>{props.comment.comment}</p>
-        <p>{props.comment.likes}</p>
-        <p>{props.comment.timestamp}</p>
+        <p>{comment.name}</p>
+        <p>{comment.comment}</p>
+        <p>{comment.likes}</p>
+        <p>{comment.timestamp}</p>
     </div>
   )
 }

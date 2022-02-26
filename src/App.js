@@ -14,21 +14,31 @@ class App extends React.Component {
   };
 
   clickedVideo = (event) => {
-    let newVideoList = [...this.state.videoList]
-  
-    let newClickedVideo = newVideoList.find(video => video.id === event.currentTarget.id) 
+    let newVideoList = [...this.state.videoList];
+
+    let newClickedVideo = newVideoList.find((video) => video.id === event.currentTarget.id);
 
     this.setState({
-      clickedVideo: newClickedVideo
-    })
-
+      clickedVideo: newClickedVideo,
+    });
   };
 
   render() {
+    const { title,image,timestamp,channel,views,likes,description,comments  } = this.state.clickedVideo;
+    console.log(title)
     return (
       <>
         <Header />
-        <ActiveVideo video={this.state.clickedVideo} />
+        <ActiveVideo
+        title={title} 
+        image={image}
+        timestamp={timestamp} 
+        channel={channel}
+        views= {views}
+        likes = {likes}
+        description = {description}
+        comments= {comments}
+        />
         <VideoList videoList={videoListSimple} clickedVideo={this.clickedVideo} />
       </>
     );

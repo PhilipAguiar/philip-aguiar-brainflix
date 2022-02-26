@@ -1,10 +1,10 @@
 import CommentItem from "../CommentItem/CommentItem";
 import "./CommentList.scss";
 
-function CommentList(props) {
+function CommentList({comments}) {
     
   return <section className="comments">
-      {props.comments.map((comment,index) => {
+      {comments.map((comment,index) => {
        return <CommentItem key = {index} comment = {comment}/>
       })}
   </section>;

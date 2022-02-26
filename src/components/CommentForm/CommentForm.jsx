@@ -1,9 +1,9 @@
 import "./CommentForm.scss";
 
-function CommentForm(props) {
+function CommentForm({comments}) {
   return (
     <section className="post">
-      <h5 className="post__count">{props.video.comments.length} Comments</h5>
+      <h5 className="post__count">{comments.length} Comments</h5>
       <div className="post__wrapper">
         <div className="post__image-container">
           <div className="post__image"></div>
