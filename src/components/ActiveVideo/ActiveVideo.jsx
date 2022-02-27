@@ -7,7 +7,7 @@ import VideoDescription from "../VideoDescription/VideoDescription";
 function ActiveVideo({title,image,timestamp,channel,views,likes,description,comments }) {
   
   return (
-    <section>
+    <section className="activeVideo">
       <VideoDescription 
         title={title} 
         timestamp={timestamp} 

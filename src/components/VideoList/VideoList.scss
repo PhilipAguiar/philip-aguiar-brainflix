@@ -8,6 +8,15 @@
         @include site-padding-tablet;
         width: 40%
     }
+    @include desktop {
+        padding: 0 0 0 1rem;
+        border-left: 1px $primary-neutral solid;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom:5rem;
+      }
     &__title{
         @include heading-padding-mobile;
         color: $primary-neutral

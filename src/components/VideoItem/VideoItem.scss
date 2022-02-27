@@ -9,11 +9,14 @@
     @include tablet{
         height: 10vw;
     }
+    @include desktop {
+        height: 5vw;
+      }
     &__image-wrapper{
         width: 40%;
         
-        
     }
+    
     &__text-wrapper{
         display: flex;
         flex-direction: column;

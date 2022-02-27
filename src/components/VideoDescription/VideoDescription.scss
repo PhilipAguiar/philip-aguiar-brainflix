@@ -8,6 +8,12 @@
   @include tablet {
     @include site-padding-tablet;
   }
+
+  @include desktop {
+    padding: 0;
+    // padding-right:1rem; 
+  }
+  
   &__title {
     @include divider-styling;
     @include page-header-mobile;

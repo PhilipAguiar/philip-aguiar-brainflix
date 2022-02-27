@@ -1,0 +1,8 @@
+@use "./styles/partials/mixins" as *;
+
+.app__desktop-container{
+  @include desktop{
+  display: flex;
+  justify-content: center;
+  }
+}
