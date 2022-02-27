@@ -1,7 +1,6 @@
 import "./CommentItem.scss";
 
 function CommentItem({ comment }) {
-  console.log(comment);
   return (
     <div className="comment">
       <div className="comment__image-container">

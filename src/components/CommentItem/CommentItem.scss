@@ -18,6 +18,10 @@
     padding-left: 0;
   }
 
+  &:last-child{
+    border: none;
+}
+
   &__image-container {
     display: flex;
     flex-direction: column;
