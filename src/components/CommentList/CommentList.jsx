@@ -7,7 +7,9 @@ function CommentList({comments,  timestampConverter }) {
       {comments.map((comment,index) => {
        return <CommentItem 
        key = {index} 
-       comment = {comment}  
+       name = {comment.name}  
+       timestamp = {comment.timestamp}  
+       comment = {comment.comment}  
        timestampConverter = {timestampConverter} />
       })}
   </section>;
