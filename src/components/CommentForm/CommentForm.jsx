@@ -2,6 +2,11 @@ import "./CommentForm.scss";
 import comment from "../../assets/Images/add_comment.svg";
 
 function CommentForm({ comments }) {
+
+const cancelSubmit = (e) => {
+  e.preventDefault();
+}
+
   return (
     <section className="post">
       <h5 className="post__count">{comments.length} Comments</h5>
@@ -15,7 +20,7 @@ function CommentForm({ comments }) {
           </label>
           <div className="post__comment-wrapper">
             <textarea name="comment" className="post__input" placeholder="Add a new comment"></textarea>
-            <button className="post__button">
+            <button className="post__button" onClick={cancelSubmit}>
               <img className="post__button-image" src={comment} alt="" />
               <p>COMMENT</p>
             </button>
