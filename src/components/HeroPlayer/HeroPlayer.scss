@@ -9,5 +9,8 @@
       background-color: $secondary-dark;
       max-height: 50vw;;
     }
+    @include tablet{
+      max-height: 40vw;;
+    }
   }
 }
