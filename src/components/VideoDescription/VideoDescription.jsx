@@ -2,16 +2,15 @@ import "./VideoDescription.scss";
 import viewsIcon from "../../assets/Images/views.svg";
 import likeIcon from "../../assets/Images/likes.svg";
 
-function VideoDescription({ title, timestamp, channel, views, likes, description }) {
-  const date = new Date(parseInt(timestamp));
-
+function VideoDescription({ title, timestamp, channel, views, likes, description,timestampConverter }) {
+  const postDate =  timestampConverter(timestamp);
   return (
     <div className="description">
       <h1 className="description__title">{title}</h1>
       <div className="description__container">
         <div className="description__info-wrapper">
           <h4 className="description__stat description__stat--bold description__stat--tablet">By {channel}</h4>
-          <p className="description__stat description__stat--bottom">{date.toLocaleDateString("en-US")}</p>
+          <p className="description__stat description__stat--bottom">{postDate}</p>
         </div>
         <div className="description__info-wrapper description__info-wrapper--right">
           <div className="description__stats-wrapper">

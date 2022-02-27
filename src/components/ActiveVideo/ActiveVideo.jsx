@@ -4,7 +4,7 @@ import CommentForm from "../CommentForm/CommentForm";
 import CommentList from "../CommentList/CommentList";
 import VideoDescription from "../VideoDescription/VideoDescription";
 
-function ActiveVideo({title,image,timestamp,channel,views,likes,description,comments }) {
+function ActiveVideo({title,image,timestamp,channel,views,likes,description,comments,timestampConverter }) {
   
   return (
     <section className="activeVideo">
@@ -14,9 +14,12 @@ function ActiveVideo({title,image,timestamp,channel,views,likes,description,comm
         channel={channel}
         views= {views}
         likes = {likes}
-        description = {description} />
+        description = {description}
+        timestampConverter = {timestampConverter} />
       <CommentForm comments={comments} />
-      <CommentList comments={comments} />
+      <CommentList 
+      comments={comments}
+      timestampConverter = {timestampConverter}  />
     </section>
   );
 }

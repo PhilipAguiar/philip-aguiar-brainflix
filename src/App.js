@@ -6,6 +6,8 @@ import HeroPlayer from "./components/HeroPlayer/HeroPlayer";
 import React from "react";
 import ActiveVideo from "./components/ActiveVideo/ActiveVideo";
 import VideoList from "./components/VideoList/VideoList";
+import timestampConverter from "./modules/TimeStamp"
+
 
 class App extends React.Component {
   state = {
@@ -36,7 +38,7 @@ class App extends React.Component {
         <Header />
         <HeroPlayer image={image} />
         <div className="app__desktop-container">
-          <ActiveVideo title={title} image={image} timestamp={timestamp} channel={channel} views={views} likes={likes} description={description} comments={comments} />
+          <ActiveVideo title={title} image={image} timestamp={timestamp} channel={channel} views={views} likes={likes} description={description} comments={comments} timestampConverter = {timestampConverter} />
           <VideoList videoList={filteredVideoList} clickedVideo={this.clickedVideo} />
         </div>
       </>
