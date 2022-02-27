@@ -18,9 +18,11 @@
     padding-left: 0;
   }
 
-  &:last-child{
-    border: none;
-}
+  &:last-child {
+    @include desktop {
+      border: none;
+    }
+  }
 
   &__image-container {
     display: flex;
@@ -33,8 +35,6 @@
 
   &__image {
     @include avatar-styling;
-  
-    
   }
 
   &__info-container {
@@ -45,7 +45,6 @@
     @include component-padding-mobile;
     display: flex;
     justify-content: space-between;
-    
   }
   &__name {
     font-weight: 700;
