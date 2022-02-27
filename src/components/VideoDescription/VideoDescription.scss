@@ -11,9 +11,9 @@
 
   @include desktop {
     padding: 0;
-    // padding-right:1rem; 
+    // padding-right:1rem;
   }
-  
+
   &__title {
     @include divider-styling;
     @include page-header-mobile;
@@ -43,24 +43,30 @@
     &--right {
       padding-right: 2rem;
       @include tablet {
-       padding: 0;
+        padding: 0;
+      }
+
+      @include desktop {
+        margin-right: 2rem;
       }
     }
 
     @include tablet {
       flex-direction: row;
-      
     }
   }
   &__channel {
   }
+
   &__stats-wrapper {
     display: flex;
+
     &--bottom {
-      padding-top: 1rem;
+      padding-top: 5rem;
+
       @include tablet {
         padding: 0;
-       }
+      }
     }
   }
 
@@ -79,7 +85,7 @@
       padding-top: 1rem;
 
       @include tablet {
-       padding: 0;
+        padding: 0;
       }
     }
 
@@ -88,13 +94,10 @@
     }
 
     &--tablet {
-      @include tablet{
-        padding-right: 3rem
+      @include tablet {
+        padding-right: 3rem;
       }
     }
-    
-
-
   }
   &__text {
     @include component-padding;

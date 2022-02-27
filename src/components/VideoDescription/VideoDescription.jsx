@@ -2,9 +2,9 @@ import "./VideoDescription.scss";
 import viewsIcon from "../../assets/Images/views.svg";
 import likeIcon from "../../assets/Images/likes.svg";
 
-function VideoDescription({title, timestamp, channel, views, likes, description}) {
+function VideoDescription({ title, timestamp, channel, views, likes, description }) {
   const date = new Date(parseInt(timestamp));
-  
+
   return (
     <div className="description">
       <h1 className="description__title">{title}</h1>
@@ -18,7 +18,7 @@ function VideoDescription({title, timestamp, channel, views, likes, description}
             <img className="description__icon" src={viewsIcon} alt="eye" />
             <p className="description__stat description__stat--tablet">{views}</p>
           </div>
-          <div className="description__stats-wrapper description__stats-wrapper--bottom">
+          <div className="description__stats-wrapper description__stats-wrapper--bottom description__stats-wrapper--desktop">
             <img className="description__icon" src={likeIcon} alt="heart" />
             <p className="description__stat">{likes}</p>
           </div>
