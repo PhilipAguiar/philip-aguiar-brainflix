@@ -9,7 +9,7 @@
         width: 40%
     }
     @include desktop {
-        padding: 0 0 0 1rem;
+        padding: 0 1rem 0 1.5rem;
         border-left: 1px $primary-neutral solid;
         width: 20%;
         display: flex;
