@@ -22,6 +22,9 @@
     @include tablet {
       border: none;
     }
+    @include desktop {
+      @include page-header;
+    }
   }
 
   &__container {
@@ -79,6 +82,9 @@
 
     @include tablet {
       padding: 0;
+    }
+    @include desktop {
+      @include body-copy;
     }
 
     &--bottom {
