@@ -114,5 +114,11 @@
       @include body-copy;
       padding-right: 2%;
     }
+
+    @include desktop{
+      font-size: 1rem;
+      line-height: 24px;
+      padding-bottom: 4rem;
+    }
   }
 }
