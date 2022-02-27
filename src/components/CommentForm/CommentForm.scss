@@ -13,6 +13,10 @@
   &__count {
     @include component-padding-mobile;
     font-weight: 700;
+
+    @include tablet{
+      @include component-padding;
+    }
   }
   &__wrapper {
     display: flex;
@@ -30,9 +34,14 @@
     align-items: center;
     margin-right: 0.8rem;
     padding-bottom: 0.5rem;
+
+    @include desktop {
+      margin-right: 3rem;
+    }
   }
 
   &__image {
+    @include avatar-styling;
     background-image: url(../../assets/Images/Mohan-muruge.jpg);
     background-size: cover;
     background-position: center;
