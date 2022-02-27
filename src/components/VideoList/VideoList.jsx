@@ -7,7 +7,7 @@ function VideoList({ videoList, clickedVideo }) {
       <h5 className="next-videos__title">NEXT VIDEOS</h5>
 
       {videoList.map((video) => {
-        return <VideoItem video = {video} clickedVideo = {clickedVideo}/>;
+        return <VideoItem key={video.id} video = {video} clickedVideo = {clickedVideo}/>;
       })}
     </section>
   );
