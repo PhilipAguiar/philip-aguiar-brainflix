@@ -14,10 +14,12 @@ class App extends React.Component {
     clickedVideo: videoListDetailed[0],
   };
 
-  clickedVideo = (event) => {
+  clickedVideo = (clickedId) => {
     let newVideoList = [...this.state.videoList];
 
-    let newClickedVideo = newVideoList.find((video) => video.id === event.currentTarget.id);
+    let newClickedVideo = newVideoList.find((video) => {
+      return video.id === clickedId;
+    });
 
     this.setState({
       clickedVideo: newClickedVideo,
