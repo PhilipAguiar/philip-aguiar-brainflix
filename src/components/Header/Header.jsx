@@ -17,7 +17,6 @@ function Header() {
       </div>
       <button className="header__button">
         <img className="header__upload" src={upload} />
-
         <p className="header__button-text">UPLOAD</p>
       </button>
     </section>
