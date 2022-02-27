@@ -1,6 +1,5 @@
 import React from "react";
 import "./ActiveVideo.scss";
-import HeroPlayer from "../HeroPlayer/HeroPlayer";
 import CommentForm from "../CommentForm/CommentForm";
 import CommentList from "../CommentList/CommentList";
 import VideoDescription from "../VideoDescription/VideoDescription";
@@ -9,7 +8,6 @@ function ActiveVideo({title,image,timestamp,channel,views,likes,description,comm
   
   return (
     <section>
-      <HeroPlayer image={image}/>
       <VideoDescription 
         title={title} 
         timestamp={timestamp} 

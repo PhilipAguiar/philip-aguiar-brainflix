@@ -2,6 +2,7 @@ import "./App.css";
 import videoListDetailed from "./data/video-details.json";
 import videoListSimple from "./data/videos.json";
 import Header from "./components/Header/Header";
+import HeroPlayer from "./components/HeroPlayer/HeroPlayer";
 import React from "react";
 import ActiveVideo from "./components/ActiveVideo/ActiveVideo";
 import VideoList from "./components/VideoList/VideoList";
@@ -31,6 +32,7 @@ class App extends React.Component {
     return (
       <>
         <Header />
+        <HeroPlayer image={image}/>
         <ActiveVideo
         title={title} 
         image={image}
