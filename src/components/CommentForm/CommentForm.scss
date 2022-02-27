@@ -6,6 +6,10 @@
   @include component-padding-mobile;
   @include divider-styling;
 
+  @include desktop {
+    padding-left: 0;
+  }
+  
   &__count {
     @include component-padding-mobile;
     font-weight: 700;
@@ -47,7 +51,7 @@
     width: 90%;
 
     @include tablet {
-      width: 100%
+      width: 100%;
     }
   }
 
