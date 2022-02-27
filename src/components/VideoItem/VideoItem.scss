@@ -7,10 +7,10 @@
     display: flex;
 
     @include tablet{
-        height: 10vw;
+        max-height: 10vw;
     }
     @include desktop {
-        height: 5vw;
+        max-height: 5vw
       }
     &__image-wrapper{
         width: 40%;
