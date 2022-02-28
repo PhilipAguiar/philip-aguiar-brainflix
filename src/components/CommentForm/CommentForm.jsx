@@ -2,10 +2,9 @@ import "./CommentForm.scss";
 import comment from "../../assets/Images/add_comment.svg";
 
 function CommentForm({ comments }) {
-
-const cancelSubmit = (e) => {
-  e.preventDefault();
-}
+  const cancelSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <section className="post">

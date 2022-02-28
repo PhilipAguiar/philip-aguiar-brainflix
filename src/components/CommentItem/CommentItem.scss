@@ -50,10 +50,12 @@
     display: flex;
     justify-content: space-between;
   }
+  
   &__name {
     font-weight: 700;
     color: $primary-dark;
   }
+
   &__date {
     color: $primary-neutral;
   }

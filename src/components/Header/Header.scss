@@ -13,14 +13,16 @@
     padding-top: 16px;
     flex-direction: row;
   }
+
   @include desktop {
     margin: auto;
-    width: 80%
+    width: 80%;
   }
 
   &__logo {
     @include logo-styling;
     padding: 1rem 0;
+
     @include tablet {
       padding-right: 14%;
     }
@@ -32,12 +34,12 @@
     align-items: center;
     justify-content: space-between;
 
-    @include tablet{
+    @include tablet {
       justify-content: flex-end;
       margin: 0;
       height: 40px;
-      width: 100%
-;    }
+      width: 100%;
+    }
   }
   &__input {
     @include form-styling;
@@ -50,13 +52,14 @@
     max-height: 1rem;
     margin-right: 1rem;
 
-    @include tablet{
+    @include tablet {
       padding: 0 0 0 2.2rem;
-      min-width:0%;
-      width: 40%;;
+      min-width: 0%;
+      width: 40%;
       min-height: 100%;
     }
-    @include desktop{
+
+    @include desktop {
       width: 20%;
       margin-right: 2rem;
     }
@@ -71,7 +74,6 @@
     @include tablet {
       margin-left: 2rem;
     }
-    
   }
   &__button {
     @include button-styling;
@@ -82,14 +84,14 @@
     font-weight: 700;
     padding: 1rem 0;
 
-    @include tablet{
+    @include tablet {
       display: none;
     }
 
-    &--tablet{
+    &--tablet {
       display: none;
 
-      @include tablet{
+      @include tablet {
         display: flex;
         height: 100%;
         width: 10rem;
@@ -97,13 +99,8 @@
     }
   }
 
-  &__button-container {
-  }
-
   &__upload {
     position: absolute;
     left: 10px;
-  }
-  &__button-text {
   }
 }

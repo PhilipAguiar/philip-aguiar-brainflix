@@ -4,7 +4,7 @@ import CommentForm from "../CommentForm/CommentForm";
 import CommentList from "../CommentList/CommentList";
 import VideoDescription from "../VideoDescription/VideoDescription";
 
-function ActiveVideo({title,image,timestamp,channel,views,likes,description,comments,timestampConverter }) {
+function ActiveVideo({title,timestamp,channel,views,likes,description,comments,timestampConverter }) {
   
   return (
     <section className="activeVideo">

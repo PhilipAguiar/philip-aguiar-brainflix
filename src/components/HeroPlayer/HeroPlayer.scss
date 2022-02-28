@@ -9,7 +9,8 @@
       background-color: $secondary-dark;
       max-height: 50vw;;
     }
-    @include tablet{
+
+    @include desktop{
       max-height: 40vw;;
     }
   }
