@@ -42,7 +42,7 @@ class Home extends React.Component {
     });
     return (
       <>
-        <HeroPlayer image={image} />
+        
         
           <ActiveVideo
             title={title}
