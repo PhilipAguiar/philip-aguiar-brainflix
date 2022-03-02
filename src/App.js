@@ -11,8 +11,8 @@ class App extends React.Component {
       <BrowserRouter>
         <Header />
         <Switch>
-        <Route path="/" exact render={() => <Home />} />
-        <Route path="/upload" render={() => <Upload />} />
+          <Route path="/" exact render={() => <Home />} />
+          <Route path="/upload" render={() => <Upload />} />
           <Home />
           <Upload />
         </Switch>

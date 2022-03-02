@@ -1,7 +1,6 @@
 import "../App.scss";
 import videoListDetailed from "../data/video-details.json";
 import videoListSimple from "../data/videos.json";
-import Header from "../components/Header/Header";
 import HeroPlayer from "../components/HeroPlayer/HeroPlayer";
 import React from "react";
 import ActiveVideo from "../components/ActiveVideo/ActiveVideo";
@@ -28,26 +27,38 @@ class Home extends React.Component {
   };
 
   render() {
-    const { title, image, timestamp, channel, views, likes, description, comments } = this.state.clickedVideo;
+    const {
+      title,
+      image,
+      timestamp,
+      channel,
+      views,
+      likes,
+      description,
+      comments,
+    } = this.state.clickedVideo;
     const filteredVideoList = this.state.simpleVideoList.filter((video) => {
       return video.id !== this.state.clickedVideo.id;
     });
     return (
       <>
-        
         <HeroPlayer image={image} />
         <div className="app__desktop-container">
-          <ActiveVideo 
-          title={title} 
-          image={image} 
-          timestamp={timestamp} 
-          channel={channel} 
-          views={views} 
-          likes={likes} 
-          description={description} 
-          comments={comments} 
-          timestampConverter={timestampConverter} />
-          <VideoList videoList={filteredVideoList} clickedVideo={this.clickedVideo} />
+          <ActiveVideo
+            title={title}
+            image={image}
+            timestamp={timestamp}
+            channel={channel}
+            views={views}
+            likes={likes}
+            description={description}
+            comments={comments}
+            timestampConverter={timestampConverter}
+          />
+          <VideoList
+            videoList={filteredVideoList}
+            clickedVideo={this.clickedVideo}
+          />
         </div>
       </>
     );
