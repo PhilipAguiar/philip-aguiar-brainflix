@@ -1,8 +1,13 @@
 import "./VideoItem.scss";
 
-function VideoItem({ id,image,title,channel, clickedVideo }) {
+function VideoItem({ id, image, title, channel, clickedVideo }) {
   return (
-    <div className="videoItem" onClick={() => {clickedVideo(id)}}>
+    <div
+      className="videoItem"
+      onClick={() => {
+        clickedVideo(id);
+      }}
+    >
       <div className="videoItem__image-wrapper">
         <img className="videoItem__image" src={image} alt="" />
       </div>
