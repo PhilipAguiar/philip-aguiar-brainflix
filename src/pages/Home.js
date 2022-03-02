@@ -43,7 +43,7 @@ class Home extends React.Component {
     return (
       <>
         <HeroPlayer image={image} />
-        <div className="app__desktop-container">
+        
           <ActiveVideo
             title={title}
             image={image}
@@ -59,7 +59,7 @@ class Home extends React.Component {
             videoList={filteredVideoList}
             clickedVideo={this.clickedVideo}
           />
-        </div>
+        
       </>
     );
   }
