@@ -1,0 +1,10 @@
+import axios from "axios";
+
+const BASE_URL = "https://project-2-api.herokuapp.com";
+const API_KEY = "7df8a143-9efa-4f6b-9de0-47e12f1b49c9";
+
+
+export default {
+    getAll: () => axios.get(`${BASE_URL}/videos?api_key=${API_KEY}`),
+    getVideoById: (id) => axios.get(`${BASE_URL}/videos/${id}?api_key=${API_KEY}`)
+}

@@ -5,24 +5,24 @@ import CommentList from "../CommentList/CommentList";
 import VideoDescription from "../VideoDescription/VideoDescription";
 import HeroPlayer from "../HeroPlayer/HeroPlayer";
 
-function ActiveVideo({title,image,timestamp,channel,views,likes,description,comments,timestampConverter }) {
-  
+function ActiveVideo({ clickedVideo,timestampConverter}) {
+  console.log(clickedVideo)
   return (
     <>
-    <HeroPlayer image={image} />
+    <HeroPlayer image={clickedVideo.image} />
     
     <section className="activeVideo">
       <VideoDescription 
-        title={title} 
-        timestamp={timestamp} 
-        channel={channel}
-        views= {views}
-        likes = {likes}
-        description = {description}
+        title={clickedVideo.title} 
+        timestamp={clickedVideo.timestamp} 
+        channel={clickedVideo.channel}
+        views= {clickedVideo.views}
+        likes = {clickedVideo.likes}
+        description = {clickedVideo.description}
         timestampConverter = {timestampConverter} />
-      <CommentForm comments={comments} />
+      <CommentForm comments={clickedVideo.comments} />
       <CommentList 
-      comments={comments}
+      comments={clickedVideo.comments}
       timestampConverter = {timestampConverter}  />
     </section>
     </>
