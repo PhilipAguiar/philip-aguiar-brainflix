@@ -9,6 +9,8 @@ import VideoList from "./components/VideoList/VideoList";
 import apiUtils from "./utils/api";
 import timestampConverter from "./utils/TimeStamp";
 
+let defaultVideo ="";
+
 class App extends React.Component {
   state = {
     videoList: null,
@@ -17,18 +19,26 @@ class App extends React.Component {
 
   componentDidMount() {
     apiUtils.getAll().then((response) => {
-      console.log(response.data)
+      console.log(response.data);
       this.setState({
         videoList: response.data,
       });
-      apiUtils.getVideoById(this.state.videoList[0].id).then((response) => {
-        console.log(response.data)
-        this.setState({
-          clickedVideo: response.data,
-        });
-      });
+      this.getClickedVideo(this.state.videoList[0].id);
+      defaultVideo = apiUtils.getVideoById(response.data[0].id).then((response)=>{
+        defaultVideo= response.data
+        console.log(defaultVideo)
+      })
+      
     });
   }
+
+  getClickedVideo = (clickedId) => {
+    apiUtils.getVideoById(clickedId).then((response) => {
+      this.setState({
+        clickedVideo: response.data,
+      });
+    });
+  };
 
   render() {
     if (!this.state.videoList || !this.state.clickedVideo) {
@@ -38,15 +48,19 @@ class App extends React.Component {
     const filteredVideoList = this.state.videoList.filter((video) => {
       return video.id !== this.state.clickedVideo.id;
     });
+
+  
+
     return (
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/" exact render={() => <Home clickedVideo={this.state.clickedVideo} timestampConverter={timestampConverter} />} />
+          
+          <Route path="/" exact render={() => <Home clickedVideo={defaultVideo} timestampConverter={timestampConverter} />} />
           <Route path="/upload" render={() => <Upload />} />
-          <Route path="/video:id" render={() => <ActiveVideo clickedVideo={this.state.clickedVideo} />} />
+          <Route path="/video/:id" render={() => <ActiveVideo clickedVideo={this.state.clickedVideo} timestampConverter={timestampConverter} />} />
         </Switch>
-        <VideoList videoList={filteredVideoList} clickedVideo={this.state.clickedVideo} />
+        <VideoList videoList={filteredVideoList} clickHandler={this.getClickedVideo} />
       </BrowserRouter>
     );
   }

@@ -5,8 +5,10 @@ import CommentList from "../CommentList/CommentList";
 import VideoDescription from "../VideoDescription/VideoDescription";
 import HeroPlayer from "../HeroPlayer/HeroPlayer";
 
-function ActiveVideo({ clickedVideo,timestampConverter}) {
-  console.log(clickedVideo)
+function ActiveVideo(props) {
+console.log(props)
+const {clickedVideo, timestampConverter} = props;
+
   return (
     <>
     <HeroPlayer image={clickedVideo.image} />

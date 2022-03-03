@@ -1,7 +1,8 @@
 import VideoItem from "../VideoItem/VideoItem";
 import "./VideoList.scss";
 
-function VideoList({ videoList, clickedVideo }) {
+function VideoList({ videoList, clickHandler }) {
+  
   return (
     <section className="next-videos">
       <h5 className="next-videos__title">NEXT VIDEOS</h5>
@@ -12,7 +13,7 @@ function VideoList({ videoList, clickedVideo }) {
                           image = {video.image}
                           title = {video.title}
                           channel = {video.channel}
-                          clickedVideo = {clickedVideo}/>;
+                          clickHandler = {clickHandler}/>;
       })}
     </section>
   );
