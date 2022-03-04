@@ -2,7 +2,8 @@ import "./VideoDescription.scss";
 import viewsIcon from "../../assets/Images/views.svg";
 import likeIcon from "../../assets/Images/likes.svg";
 
-function VideoDescription({ title, timestamp, channel, views, likes, description, timestampConverter }) {
+function VideoDescription({ video, timestampConverter }) {
+  const {title,timestamp,channel,views,likes,description} = video
   const postDate = timestampConverter(timestamp);
   return (
     <div className="description">

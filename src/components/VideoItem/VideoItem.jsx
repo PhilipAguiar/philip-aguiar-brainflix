@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "./VideoItem.scss";
 
-function VideoItem({ id, image, title, channel, clickHandler }) {
+function VideoItem({ video, clickHandler }) {
+  const { id, image, title, channel } = video;
 
-  
   return (
     <Link to={`/video/${id}`}>
       <div

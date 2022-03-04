@@ -9,10 +9,7 @@ function VideoList({ videoList, clickHandler }) {
 
       {videoList.map((video) => {
         return <VideoItem key={video.id} 
-                          id = {video.id} 
-                          image = {video.image}
-                          title = {video.title}
-                          channel = {video.channel}
+                          video = {video}
                           clickHandler = {clickHandler}/>;
       })}
     </section>

@@ -1,6 +1,7 @@
 import "./CommentItem.scss";
 
-function CommentItem({ name,timestamp,comment, timestampConverter }) {
+function CommentItem({ commentObj, timestampConverter }) {
+  const { name,timestamp, comment } = commentObj
   return (
     <div className="comment">
       <div className="comment__image-container">
