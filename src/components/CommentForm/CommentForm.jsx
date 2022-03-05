@@ -1,5 +1,5 @@
 import "./CommentForm.scss";
-import comment from "../../assets/Images/add_comment.svg";
+import commentImage from "../../assets/Images/add_comment.svg";
 
 function CommentForm({ comments }) {
   const cancelSubmit = (e) => {
@@ -20,7 +20,7 @@ function CommentForm({ comments }) {
           <div className="post__comment-wrapper">
             <textarea name="comment" className="post__input" placeholder="Add a new comment"></textarea>
             <button className="post__button" onClick={cancelSubmit}>
-              <img className="post__button-image" src={comment} alt="" />
+              <img className="post__button-image" src={commentImage} alt="" />
               <p>COMMENT</p>
             </button>
           </div>

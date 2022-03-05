@@ -1,24 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
 import "./ActiveVideo.scss";
 import CommentForm from "../CommentForm/CommentForm";
 import CommentList from "../CommentList/CommentList";
 import VideoDescription from "../VideoDescription/VideoDescription";
 import HeroPlayer from "../HeroPlayer/HeroPlayer";
 
-function ActiveVideo(props) {
-  const { clickedVideo, timestampConverter } = props;
+class ActiveVideo extends Component {
+  
+  componentDidUpdate(prevProps) {
+    const videoId = this.props.routerProps.match.params.id;
 
-  return (
-    <>
-      <HeroPlayer image={clickedVideo.image} />
+    if (prevProps.activeVideo.id !== videoId) {
+      this.props.setActiveVideo(this.props.routerProps.match.params.id);
+    }
+  }
 
-      <section className="activeVideo">
-        <VideoDescription video={clickedVideo} timestampConverter={timestampConverter} />
-        <CommentForm comments={clickedVideo.comments} />
-        <CommentList comments={clickedVideo.comments} timestampConverter={timestampConverter} />
-      </section>
-    </>
-  );
+  render() {
+    
+    const { activeVideo, timestampConverter } = this.props;
+    return (
+      <>
+        <HeroPlayer image={activeVideo.image} />
+
+        <section className="activeVideo">
+          <VideoDescription video={activeVideo} timestampConverter={timestampConverter} />
+          <CommentForm comments={activeVideo.comments} />
+          <CommentList comments={activeVideo.comments} timestampConverter={timestampConverter} />
+        </section>
+      </>
+    );
+  }
 }
 
 export default ActiveVideo;

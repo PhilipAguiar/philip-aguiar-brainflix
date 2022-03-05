@@ -8,9 +8,6 @@ function VideoItem({ video, clickHandler }) {
     <Link to={`/video/${id}`}>
       <div
         className="videoItem"
-        onClick={() => {
-          clickHandler(id);
-        }}
       >
         <div className="videoItem__image-wrapper">
           <img className="videoItem__image" src={image} alt="" />

@@ -4,10 +4,10 @@ import ActiveVideo from "../components/ActiveVideo/ActiveVideo";
 
 class Home extends React.Component {
   render() {
-    const { clickedVideo, timestampConverter } = this.props;
+    const { video, timestampConverter } = this.props;
     return (
       <>
-        <ActiveVideo clickedVideo={clickedVideo} timestampConverter={timestampConverter} />
+        <ActiveVideo activeVideo={video} timestampConverter={timestampConverter} />
       </>
     );
   }
