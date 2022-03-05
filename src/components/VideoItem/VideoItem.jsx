@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./VideoItem.scss";
 
@@ -5,7 +6,7 @@ function VideoItem({ video, clickHandler }) {
   const { id, image, title, channel } = video;
 
   return (
-    <Link to={`/video/${id}`}>
+    <NavLink className="videoItem__link" to={`/video/${id}`}>
       <div
         className="videoItem"
       >
@@ -17,7 +18,7 @@ function VideoItem({ video, clickHandler }) {
           <p className="videoItem__channel">{channel}</p>
         </div>
       </div>
-    </Link>
+    </NavLink>
   );
 }
 

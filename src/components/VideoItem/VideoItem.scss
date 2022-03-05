@@ -3,8 +3,10 @@
 
 .videoItem {
   padding: 8px 0;
-  height: 20vw;
+  height: 22vw;
   display: flex;
+  text-decoration: none;
+
 
   @include tablet {
     max-height: 10vw;
@@ -14,7 +16,8 @@
     padding: .8rem 0;
   }
   &__image-wrapper {
-    width: 40%;
+    width: 38%;
+    overflow: hidden;
   }
 
   &__text-wrapper {
@@ -27,6 +30,8 @@
   }
 
   &__image {
+    object-fit:cover;
+    object-position: top;
     border-radius: 0.4rem;
     height: 100%;
     width: 100%;
@@ -34,6 +39,7 @@
 
   &__title {
     font-size: 0.8rem;
+    text-overflow: ellipsis;
     @include tablet {
       font-size: 0.9rem;
     }
@@ -46,5 +52,9 @@
     @include tablet {
       font-size: 1rem;
     }
+  }
+  &__link{
+    text-decoration: none;
+    color:$primary-dark;
   }
 }

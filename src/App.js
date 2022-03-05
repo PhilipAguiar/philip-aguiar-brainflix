@@ -3,7 +3,6 @@ import Header from "./components/Header/Header";
 import React from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Upload from "./pages/Upload";
-import Home from "./pages/Home";
 import ActiveVideo from "./components/ActiveVideo/ActiveVideo";
 import VideoList from "./components/VideoList/VideoList";
 import apiUtils from "./utils/api";

@@ -134,6 +134,7 @@
 
 @mixin form-styling {
   @include default-border-radius;
+  background-color: $secondary-light;
   outline: none;
   border: 1px solid $secondary-neutral;
   min-height: 36px;

@@ -46,17 +46,22 @@
   }
 
   &__user-wrapper {
-    @include component-padding-mobile;
+    padding-bottom: .5rem;
     display: flex;
     justify-content: space-between;
   }
   
   &__name {
+    @include subheader-mobile;
     font-weight: 700;
     color: $primary-dark;
   }
 
   &__date {
+    @include body-copy-mobile;
     color: $primary-neutral;
+  }
+  &__text{
+    @include body-copy-mobile
   }
 }
