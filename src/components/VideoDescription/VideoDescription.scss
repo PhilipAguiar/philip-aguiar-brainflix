@@ -20,11 +20,10 @@
     padding: 16px 0;
 
     @include tablet {
+      @include page-header;
       border: none;
     }
-    @include desktop {
-      @include page-header;
-    }
+    
   }
 
   &__container {

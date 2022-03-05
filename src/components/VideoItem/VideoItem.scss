@@ -7,17 +7,19 @@
   display: flex;
   text-decoration: none;
 
-
   @include tablet {
     max-height: 10vw;
   }
   @include desktop {
     max-height: 5vw;
-    padding: .8rem 0;
+    padding: 0.8rem 0;
   }
   &__image-wrapper {
     width: 38%;
-    overflow: hidden;
+
+    @include tablet {
+      width: 45%;
+    }
   }
 
   &__text-wrapper {
@@ -30,11 +32,14 @@
   }
 
   &__image {
-    object-fit:cover;
-    object-position: top;
+    object-fit: cover;
+    object-position: 25% 25%;
     border-radius: 0.4rem;
     height: 100%;
     width: 100%;
+    @include tablet {
+      
+    }
   }
 
   &__title {
@@ -53,8 +58,8 @@
       font-size: 1rem;
     }
   }
-  &__link{
+  &__link {
     text-decoration: none;
-    color:$primary-dark;
+    color: $primary-dark;
   }
 }
