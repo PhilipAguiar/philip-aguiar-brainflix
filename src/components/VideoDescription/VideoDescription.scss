@@ -23,7 +23,6 @@
       @include page-header;
       border: none;
     }
-    
   }
 
   &__container {
@@ -100,7 +99,7 @@
 
     &--tablet {
       @include tablet {
-        padding-right: 3rem;
+        padding-right: 1.5rem;
       }
     }
   }
@@ -114,11 +113,11 @@
       padding-right: 2%;
     }
 
-    @include desktop{
+    @include desktop {
       font-size: 1rem;
       line-height: 24px;
       padding-top: 1.8rem;
-      padding-bottom: 4rem;
+      padding-bottom: 3rem;
     }
   }
 }
