@@ -4,27 +4,38 @@
 
 .upload {
   @include site-padding-mobile;
-  border-top: 1px solid $secondary-neutral;
+  
 
   @include tablet {
     @include site-padding-tablet;
+    border-top: 1px solid $secondary-neutral;
   }
   @include desktop {
     @include site-padding-desktop;
+    
   }
 
   &__title {
     @include page-header-mobile;
     padding: 1.5rem 0;
+    @include tablet {
+      @include page-header;
+      @include divider-styling;
+      @include heading-padding;
+    }
   }
   &__subheader {
     @include component-padding-mobile;
   }
   &__image {
-    @include component-padding-mobile;
     @include default-border-radius;
     margin-top: 4px;
+    margin-bottom: 16px;
     width: 100%;
+    @include tablet {
+      width: 50%;
+      height: 25vw;
+    }
   }
   &__form {
     display: flex;
@@ -34,6 +45,11 @@
     @include labels-buttons;
     font-size: 0.9rem;
     color: $primary-neutral;
+    &--tablet {
+      @include tablet {
+        padding-top: 36px;
+      }
+    }
   }
   &__title-input {
     @include default-border-radius;
@@ -44,22 +60,47 @@
     border: 1px solid $secondary-neutral;
     padding: 12px;
     &::placeholder {
-        color: $primary-dark;
-      }
+      color: $primary-dark;
+    }
   }
   &__description-input {
     @extend .upload__title-input;
     min-height: 20vw;
     resize: none;
+
+    @include tablet{
+    min-height: 9vh;
+    margin-bottom: 2rem
+    }
+   
   }
-  &__button-upload {
+  &__button-publish {
     @include button-styling;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0.5rem 0 1rem;
-    
+
+    @include tablet {
+        display: none;
+    }
+    &--tablet{
+        display: none;
+      @include tablet {
+        display: flex;
+      }
+    }
+  }
+
+  &__wrapper{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      @include tablet{
+        border-top: 1px solid $secondary-neutral;
+        padding-top: 1rem;;
+      }
   }
   &__icon {
     position: absolute;
@@ -75,5 +116,9 @@
     color: $primary-color;
     border: none;
     font-weight: 700;
+
+    @include tablet{
+        margin: 0 10% 0;
+    }
   }
 }

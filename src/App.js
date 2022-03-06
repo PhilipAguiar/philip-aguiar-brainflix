@@ -31,9 +31,8 @@ class App extends React.Component {
           activeVideo: response.data,
         });
       });
-    }
-    else{
-      this.setDefaultVideo()
+    } else {
+      this.setDefaultVideo();
     }
   };
 
@@ -67,6 +66,8 @@ class App extends React.Component {
                 timestampConverter={timestampConverter}
                 activeVideo={this.state.activeVideo}
                 setActiveVideo={this.setActiveVideo}
+                videoList={filteredVideoList}
+                clickHandler={this.setActiveVideo}
               />
             )}
           />
@@ -80,12 +81,14 @@ class App extends React.Component {
                 timestampConverter={timestampConverter}
                 activeVideo={this.state.activeVideo}
                 setActiveVideo={this.setActiveVideo}
+                videoList={filteredVideoList}
+                clickHandler={this.setActiveVideo}
               />
             )}
           />
         </Switch>
 
-        <VideoList videoList={filteredVideoList} clickHandler={this.setActiveVideo} />
+        
       </BrowserRouter>
     );
   }
