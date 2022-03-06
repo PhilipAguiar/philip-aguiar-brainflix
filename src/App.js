@@ -57,10 +57,7 @@ class App extends React.Component {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route
-            path="/"
-            exact
-            render={(routerProps) => (
+          <Route path="/" exact render={(routerProps) => (
               <ActiveVideo
                 routerProps={routerProps}
                 timestampConverter={timestampConverter}
@@ -72,7 +69,7 @@ class App extends React.Component {
             )}
           />
 
-          <Route path="/upload" render={() => <Upload />} />
+          <Route path="/upload" render={(routerProps) => <Upload routerProps={routerProps}/>} />
           <Route
             path="/video/:id"
             render={(routerProps) => (

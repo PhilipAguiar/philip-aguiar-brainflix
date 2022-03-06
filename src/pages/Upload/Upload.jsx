@@ -1,9 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import uploadImage from "../../assets/Images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/Images/publish.svg";
 import "./Upload.scss";
-function Upload() {
+
+function Upload({ routerProps }) {
+  console.log(routerProps);
+  const history = routerProps.history;
+  const clickHandler = (e) => {
+    e.preventDefault();
+    alert("Your video has been submited!");
+    history.push("/");
+  };
+
   return (
     <section className="upload">
       <h1 className="upload__title">UPLOAD VIDEO</h1>
@@ -20,13 +28,13 @@ function Upload() {
             <textarea className="upload__description-input" placeholder="Add a description to your video" />
           </div>
         </div>
-        <button className="upload__button-publish">
+        <button className="upload__button-publish" onClick={clickHandler}>
           <img className="upload__icon" src={publishIcon} />
           <p className="upload__button-text">PUBLISH</p>
         </button>
         <div className="upload__wrapper">
           <p className="upload__cancel">CANCEL</p>
-          <button className="upload__button-publish upload__button-publish--tablet">
+          <button className="upload__button-publish upload__button-publish--tablet" onClick={clickHandler}>
             <img className="upload__icon" src={publishIcon} />
             <p className="upload__button-text">PUBLISH</p>
           </button>
