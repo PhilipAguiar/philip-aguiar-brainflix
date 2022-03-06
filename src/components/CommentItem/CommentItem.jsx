@@ -4,7 +4,7 @@ import deleteImage from "../../assets/Images/delete_black_24dp.svg"
 function CommentItem({ commentObj, timestampConverter,videoId, avatar,deleteComment}) {
 
   const { name, timestamp, comment,id } = commentObj;
-  console.log(videoId)
+  
   return (
     <div className="comment">
       <div className="comment__image-container">

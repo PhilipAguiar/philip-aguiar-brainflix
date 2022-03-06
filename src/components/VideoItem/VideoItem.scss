@@ -3,7 +3,7 @@
 
 .videoItem {
   padding: 8px 0;
-  height: 22vw;
+  height: 4rem;
   display: flex;
   text-decoration: none;
 
@@ -17,11 +17,9 @@
   }
 
   &__image-wrapper {
-    width: 38%;
+    width: 7rem;
 
-    @include tablet {
-      width: 45%;
-    }
+    
   }
 
   &__text-wrapper {
@@ -42,20 +40,26 @@
   }
 
   &__title {
-    font-size: 0.8rem;
+    font-size: .85rem;
     text-overflow: ellipsis;
 
     @include tablet {
       font-size: 0.9rem;
     }
+    @include desktop {
+      font-size: .85rem;
+    }
   }
 
   &__channel {
     padding-bottom: 0.2rem;
-    font-size: 0.8rem;
+    font-size: .9rem;
 
     @include tablet {
       font-size: 1rem;
+    }
+    @include desktop {
+      font-size: .9rem;
     }
   }
   

@@ -65,7 +65,7 @@ class ActiveVideo extends Component {
   
 
   componentDidUpdate(prevProps) {
-    console.log(prevProps);
+   
     const videoId = this.props.routerProps.match.params.id;
 
     if (prevProps.routerProps.match.params.id !== videoId) {
