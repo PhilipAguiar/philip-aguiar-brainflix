@@ -4,7 +4,7 @@ import "./CommentList.scss";
 function CommentList({comments,  timestampConverter }) {
     
   return <section className="comments">
-      {comments.map((comment,index) => {
+      {comments.sort((a,b)=>{return b.timestamp-a.timestamp}).map((comment,index) => {
        return <CommentItem 
        key = {index} 
        commentObj ={comment}

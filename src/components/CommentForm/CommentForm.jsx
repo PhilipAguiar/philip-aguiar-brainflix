@@ -1,9 +1,11 @@
 import "./CommentForm.scss";
 import commentImage from "../../assets/Images/add_comment.svg";
+import apiUtils from "../../utils/api";
 
-function CommentForm({ comments }) {
+function CommentForm({ id,comments }) {
   const cancelSubmit = (e) => {
     e.preventDefault();
+    apiUtils.postComment(id,"test","testttt")
   };
 
   return (

@@ -12,6 +12,7 @@ class ActiveVideo extends Component {
   state = {
     videoList: null,
     activeVideo: null,
+    commentList:[]
   };
 
   componentDidMount() {
@@ -33,7 +34,9 @@ class ActiveVideo extends Component {
       apiUtils.getVideoById(activeId).then((response) => {
         this.setState({
           activeVideo: response.data,
+          commentList:response.data.comments
         });
+        
       });
     } else {
       this.setDefaultVideo();
@@ -72,8 +75,8 @@ class ActiveVideo extends Component {
 
         <section className="activeVideo">
           <VideoDescription video={this.state.activeVideo} timestampConverter={timestampConverter} />
-          <CommentForm comments={this.state.activeVideo.comments} />
-          <CommentList comments={this.state.activeVideo.comments} timestampConverter={timestampConverter} />
+          <CommentForm id={this.state.activeVideo.id} comments={this.state.commentList} />
+          <CommentList comments={this.state.commentList} timestampConverter={timestampConverter} />
         </section>
 
         <VideoList videoList={filteredVideoList} clickHandler={this.setActiveVideo} />
