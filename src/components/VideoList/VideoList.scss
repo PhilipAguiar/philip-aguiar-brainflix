@@ -21,5 +21,9 @@
   &__title {
     padding: 16px 0 8px;
     color: $primary-neutral;
+    
+    @include desktop {
+      padding-top: 0;
+    }
   }
 }
