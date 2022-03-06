@@ -25,7 +25,7 @@ class ActiveVideo extends Component {
       } else {
         this.setActiveVideo(response.data[0].id);
       }
-    });
+    }).catch(error=>console.log(error));
   }
 
   setActiveVideo = (activeId) => {
@@ -36,7 +36,7 @@ class ActiveVideo extends Component {
           commentList:response.data.comments
         });
         
-      });
+      }).catch(error=>console.log(error));
     } else {
       this.setDefaultVideo();
     }
@@ -47,20 +47,20 @@ class ActiveVideo extends Component {
       this.setState({
         activeVideo: response.data,
       });
-    });
+    }).catch(error=>console.log(error));
   };
 
   addNewComment = (id,name,comment) => {
     apiUtils.postComment(id,name,comment).then(()=>{
       this.setActiveVideo(id)
-    })
+    }).catch(error=>console.log(error));
     
   };
 
   deleteComment = (videoId,commentId) => {
     apiUtils.deleteComment(videoId,commentId).then(()=>{
       this.setActiveVideo(videoId)
-    })
+    }).catch(error=>console.log(error));
   }
   
 

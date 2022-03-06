@@ -26,7 +26,6 @@
     justify-content: space-between;
     width: 60%;
     padding-left: 1rem;
-    text-overflow: ellipsis;
   }
 
   &__image {
@@ -36,14 +35,13 @@
     height: 100%;
     width: 100%;
   }
-
   &__title {
-    font-size: .85rem;
+    font-size: .9rem;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
     text-overflow: ellipsis;
-
-    @include tablet {
-      font-size: 0.9rem;
-    }
     
   }
 
