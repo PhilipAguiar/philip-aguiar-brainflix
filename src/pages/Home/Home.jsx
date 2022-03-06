@@ -19,6 +19,7 @@ class ActiveVideo extends Component {
       this.setState({
         videoList: response.data,
       });
+      
       if (this.props.routerProps.match.params.id) {
         this.setActiveVideo(this.props.routerProps.match.params.id);
       } else {
