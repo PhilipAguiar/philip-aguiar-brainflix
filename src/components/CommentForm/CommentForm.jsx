@@ -48,6 +48,8 @@ class CommentForm extends Component {
                 <img className="post__button-image" src={commentImage} alt="" />
                 <p>COMMENT</p>
               </button>
+
+              
             </div>
           </form>
         </div>

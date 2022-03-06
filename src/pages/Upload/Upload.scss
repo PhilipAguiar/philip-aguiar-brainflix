@@ -116,6 +116,10 @@
     border: 1px solid $secondary-neutral;
     padding: 12px;
 
+    &:focus {
+      border: 2px solid $primary-color;
+    }
+
     @include desktop {
       width: 100%;
     }

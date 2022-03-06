@@ -57,6 +57,13 @@ class ActiveVideo extends Component {
     
   };
 
+  deleteComment = (videoId,commentId) => {
+    apiUtils.deleteComment(videoId,commentId).then(()=>{
+      this.setActiveVideo(videoId)
+    })
+  }
+  
+
   componentDidUpdate(prevProps) {
     console.log(prevProps);
     const videoId = this.props.routerProps.match.params.id;
@@ -82,7 +89,7 @@ class ActiveVideo extends Component {
         <section className="activeVideo">
           <VideoDescription video={this.state.activeVideo} timestampConverter={timestampConverter} />
           <CommentForm id={this.state.activeVideo.id} comments={this.state.activeVideo.comments} addNewComment={this.addNewComment}/>
-          <CommentList comments={this.state.commentList} timestampConverter={timestampConverter} />
+          <CommentList videoId={this.state.activeVideo.id} comments={this.state.commentList} timestampConverter={timestampConverter} deleteComment={this.deleteComment}/>
         </section>
 
         <VideoList videoList={filteredVideoList} clickHandler={this.setActiveVideo} />

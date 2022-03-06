@@ -10,5 +10,7 @@ export default {
     postComment: (id,newName,newComment) => axios.post(`${BASE_URL}/videos/${id}/comments?api_key=${API_KEY}`,{
         name: newName,
         comment: newComment,
-      })
+      }),
+    deleteComment: (video_id,comment_id) => axios
+    .delete(`${BASE_URL}/videos/${video_id}/comments/${comment_id}?api_key=${API_KEY}`)  
 }

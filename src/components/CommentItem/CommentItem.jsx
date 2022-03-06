@@ -1,7 +1,10 @@
 import "./CommentItem.scss";
+import deleteImage from "../../assets/Images/delete_black_24dp.svg"
 
-function CommentItem({ commentObj, timestampConverter, avatar }) {
-  const { name, timestamp, comment } = commentObj;
+function CommentItem({ commentObj, timestampConverter,videoId, avatar,deleteComment}) {
+
+  const { name, timestamp, comment,id } = commentObj;
+  console.log(videoId)
   return (
     <div className="comment">
       <div className="comment__image-container">
@@ -17,6 +20,10 @@ function CommentItem({ commentObj, timestampConverter, avatar }) {
         </div>
         <p className="comment__text">{comment}</p>
       </div>
+
+      <img className="comment__delete" src={deleteImage} alt="delete" 
+      onClick={()=>deleteComment(videoId,id)} />
+
     </div>
   );
 }

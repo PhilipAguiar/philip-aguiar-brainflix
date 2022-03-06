@@ -150,7 +150,7 @@
     padding: 16px;
   }
   
-  &:active {
+  &:focus {
     border: 2px solid $primary-color;
   }
 }

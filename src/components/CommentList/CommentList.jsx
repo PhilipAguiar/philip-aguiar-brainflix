@@ -1,7 +1,7 @@
 import CommentItem from "../CommentItem/CommentItem";
 import "./CommentList.scss";
 
-function CommentList({ comments, timestampConverter }) {
+function CommentList({ comments, timestampConverter,videoId, deleteComment }) {
   return (
     <section className="comments">
       {comments
@@ -10,9 +10,9 @@ function CommentList({ comments, timestampConverter }) {
         })
         .map((comment, index) => {
           if (comment.name === "BrainStation Man") {
-            return <CommentItem key={index} commentObj={comment} timestampConverter={timestampConverter} avatar={true}/>;
+            return <CommentItem key={index} videoId={videoId} commentObj={comment} timestampConverter={timestampConverter} deleteComment={deleteComment} avatar={true}/>;
           } else {
-            return <CommentItem key={index} commentObj={comment} timestampConverter={timestampConverter} />;
+            return <CommentItem key={index} videoId={videoId} commentObj={comment} timestampConverter={timestampConverter} deleteComment={deleteComment}/>;
           }
         })}
     </section>
