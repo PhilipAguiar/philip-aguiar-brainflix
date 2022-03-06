@@ -103,6 +103,9 @@
       color: $primary-dark;
     }
 
+    &--error{
+      border: 1px solid red;
+    }
    
   }
 

@@ -12,7 +12,6 @@ class ActiveVideo extends Component {
   state = {
     videoList: null,
     activeVideo: null,
-    commentList:[]
   };
 
   componentDidMount() {
@@ -52,11 +51,8 @@ class ActiveVideo extends Component {
   };
 
   addNewComment = (id,name,comment) => {
-    apiUtils.postComment(id,name,comment).then(response=>{
-      let newCommentList = [...this.state.commentList,response.data]
-      this.setState({
-        commentList: newCommentList,
-      })
+    apiUtils.postComment(id,name,comment).then(()=>{
+      this.setActiveVideo(id)
     })
     
   };
@@ -85,7 +81,7 @@ class ActiveVideo extends Component {
 
         <section className="activeVideo">
           <VideoDescription video={this.state.activeVideo} timestampConverter={timestampConverter} />
-          <CommentForm id={this.state.activeVideo.id} comments={this.state.commentList} addNewComment={this.addNewComment}/>
+          <CommentForm id={this.state.activeVideo.id} comments={this.state.activeVideo.comments} addNewComment={this.addNewComment}/>
           <CommentList comments={this.state.commentList} timestampConverter={timestampConverter} />
         </section>
 
