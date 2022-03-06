@@ -47,11 +47,11 @@
   }
 
   &__user-wrapper {
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
   }
-  
+
   &__name {
     @include subheader-mobile;
     font-weight: 700;
@@ -62,7 +62,8 @@
     @include body-copy-mobile;
     color: $primary-neutral;
   }
-  &__text{
-    @include body-copy-mobile
+  
+  &__text {
+    @include body-copy-mobile;
   }
 }

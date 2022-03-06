@@ -9,6 +9,7 @@
     @include site-padding-tablet;
     border-top: 1px solid $secondary-neutral;
   }
+
   @include desktop {
     padding: 0;
     width: 100%;
@@ -18,11 +19,13 @@
   &__title {
     @include page-header-mobile;
     padding: 1.5rem 0;
+
     @include tablet {
       @include page-header;
       @include divider-styling;
       @include heading-padding;
     }
+
     @include desktop {
       padding-left: 10%;
       border-bottom: none;
@@ -35,6 +38,7 @@
       width: 100%;
     }
   }
+
   &__image-wrapper {
     @include desktop {
       display: flex;
@@ -45,6 +49,7 @@
       padding-bottom: 2rem;
     }
   }
+
   &__input-wrapper {
     display: flex;
     flex-direction: column;
@@ -54,46 +59,54 @@
   &__subheader {
     @include component-padding-mobile;
   }
+
   &__image {
     @include default-border-radius;
     margin-top: 4px;
     margin-bottom: 16px;
     width: 100%;
+
     @include tablet {
       width: 50%;
       height: 25vw;
     }
+
     @include desktop {
       height: 10.6rem;
       width: 20rem;
-
       margin-bottom: 0;
     }
   }
+
   &__form {
     display: flex;
     flex-direction: column;
-    @include desktop{
+
+    @include desktop {
       margin: auto;
       width: 80%;
       border-top: 1px solid $secondary-neutral;
     }
   }
+
   &__label {
     @include labels-buttons;
     font-size: 0.9rem;
     color: $primary-neutral;
+
     &--tablet {
       @include tablet {
         padding-top: 36px;
       }
     }
+
     &--desktop {
       @include desktop {
         padding-top: 36px;
       }
     }
   }
+
   &__title-input {
     @include default-border-radius;
     margin-top: 4px;
@@ -111,6 +124,7 @@
       color: $primary-dark;
     }
   }
+
   &__description-input {
     @extend .upload__title-input;
     min-height: 20vw;
@@ -121,6 +135,7 @@
       margin-bottom: 2rem;
     }
   }
+
   &__button-publish {
     @include button-styling;
     position: relative;
@@ -132,6 +147,7 @@
     @include tablet {
       display: none;
     }
+
     &--tablet {
       display: none;
       @include tablet {
@@ -144,18 +160,22 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
     @include tablet {
       border-top: 1px solid $secondary-neutral;
       padding-top: 1rem;
     }
   }
+
   &__icon {
     position: absolute;
     left: 10px;
   }
+
   &__button-text {
     @include labels-buttons;
   }
+  
   &__cancel {
     @include labels-buttons;
     cursor: pointer;
@@ -169,7 +189,7 @@
       margin: 0 10% 0;
     }
 
-    &:hover{
+    &:hover {
       color: $secondary-color;
     }
   }

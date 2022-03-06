@@ -9,6 +9,7 @@
   @include tablet {
     @include site-padding-tablet;
   }
+
   @include desktop {
     @include site-padding-desktop;
     padding-left: 0;
@@ -22,6 +23,7 @@
       @include component-padding;
     }
   }
+
   &__wrapper {
     display: flex;
     width: 100%;
@@ -113,7 +115,6 @@
   &__button {
     @include button-styling;
     @include labels-buttons;
-
     display: flex;
     width: 100%;
     justify-content: center;
@@ -127,6 +128,7 @@
       margin-left: 3%;
     }
   }
+  
   &__button-image {
     position: absolute;
     left: 10px;

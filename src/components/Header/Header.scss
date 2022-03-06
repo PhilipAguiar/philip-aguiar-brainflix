@@ -25,12 +25,10 @@
     padding: 1rem 0;
 
     @include tablet {
-      padding: .5rem 14% .5rem;
-      
+      padding: 0.5rem 14% 0.5rem;
     }
     @include desktop {
       padding-left: 0;
-      
     }
   }
 
@@ -47,6 +45,7 @@
       width: 100%;
     }
   }
+
   &__input {
     @include form-styling;
     background-image: url(../../assets/Images/search.svg);
@@ -69,10 +68,12 @@
       width: 20%;
       margin-right: 2rem;
     }
-    &::placeholder{
+
+    &::placeholder {
       color: $secondary-dark;
     }
   }
+
   &__avatar {
     @include avatar-styling;
     background-size: cover;
@@ -84,6 +85,7 @@
       margin-left: 1.3rem;
     }
   }
+
   &__button {
     @include button-styling;
     width: 100%;
@@ -109,10 +111,12 @@
       }
     }
   }
-  &__link{
+
+  &__link {
     text-decoration: none;
   }
-  &__home{
+  
+  &__home {
     margin: auto;
   }
 

@@ -1,10 +1,9 @@
 import "./App.scss";
 import Header from "./components/Header/Header";
 import React from "react";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Upload from "./pages/Upload/Upload";
-import ActiveVideo from "./components/ActiveVideo/ActiveVideo";
-import VideoList from "./components/VideoList/VideoList";
+import Home from "./pages/Home/Home";
 import apiUtils from "./utils/api";
 import timestampConverter from "./utils/TimeStamp";
 
@@ -58,7 +57,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route path="/" exact render={(routerProps) => (
-              <ActiveVideo
+              <Home
                 routerProps={routerProps}
                 timestampConverter={timestampConverter}
                 activeVideo={this.state.activeVideo}
@@ -73,7 +72,7 @@ class App extends React.Component {
           <Route
             path="/video/:id"
             render={(routerProps) => (
-              <ActiveVideo
+              <Home
                 routerProps={routerProps}
                 timestampConverter={timestampConverter}
                 activeVideo={this.state.activeVideo}

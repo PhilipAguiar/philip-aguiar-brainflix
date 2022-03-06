@@ -116,7 +116,7 @@
 @mixin button-styling {
   @include default-border-radius;
   @include labels-buttons;
-  cursor:pointer;
+  cursor: pointer;
   height: 40px;
   padding-left: 32px;
   padding-right: 32px;
@@ -124,7 +124,7 @@
   color: $primary-light;
   border: 0;
 
-  @include tablet{
+  @include tablet {
     min-width: 150px;
   }
 
@@ -136,6 +136,7 @@
 // form fields
 
 @mixin form-styling {
+
   @include default-border-radius;
   background-color: $secondary-light;
   outline: none;
@@ -148,6 +149,7 @@
     min-height: 40px;
     padding: 16px;
   }
+  
   &:active {
     border: 2px solid $primary-color;
   }

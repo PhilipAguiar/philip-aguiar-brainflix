@@ -10,10 +10,12 @@
   @include tablet {
     max-height: 10vw;
   }
+
   @include desktop {
     max-height: 5vw;
     padding: 0.8rem 0;
   }
+
   &__image-wrapper {
     width: 38%;
 
@@ -37,14 +39,12 @@
     border-radius: 0.4rem;
     height: 100%;
     width: 100%;
-    @include tablet {
-      
-    }
   }
 
   &__title {
     font-size: 0.8rem;
     text-overflow: ellipsis;
+
     @include tablet {
       font-size: 0.9rem;
     }
@@ -58,6 +58,7 @@
       font-size: 1rem;
     }
   }
+  
   &__link {
     text-decoration: none;
     color: $primary-dark;
