@@ -25,8 +25,8 @@ class ActiveVideo extends Component {
           <VideoDescription video={activeVideo} timestampConverter={timestampConverter} />
           <CommentForm comments={activeVideo.comments} />
           <CommentList comments={activeVideo.comments} timestampConverter={timestampConverter} />
-          <VideoList videoList={videoList} clickHandler={clickHandler} />
         </section>
+          <VideoList videoList={videoList} clickHandler={clickHandler} />
       </>
     );
   }
