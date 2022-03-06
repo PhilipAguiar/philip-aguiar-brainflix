@@ -1,0 +1,79 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+
+.upload {
+  @include site-padding-mobile;
+  border-top: 1px solid $secondary-neutral;
+
+  @include tablet {
+    @include site-padding-tablet;
+  }
+  @include desktop {
+    @include site-padding-desktop;
+  }
+
+  &__title {
+    @include page-header-mobile;
+    padding: 1.5rem 0;
+  }
+  &__subheader {
+    @include component-padding-mobile;
+  }
+  &__image {
+    @include component-padding-mobile;
+    @include default-border-radius;
+    margin-top: 4px;
+    width: 100%;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    @include labels-buttons;
+    font-size: 0.9rem;
+    color: $primary-neutral;
+  }
+  &__title-input {
+    @include default-border-radius;
+    margin-top: 4px;
+    margin-bottom: 1rem;
+    background-color: $secondary-light;
+    outline: none;
+    border: 1px solid $secondary-neutral;
+    padding: 12px;
+    &::placeholder {
+        color: $primary-dark;
+      }
+  }
+  &__description-input {
+    @extend .upload__title-input;
+    min-height: 20vw;
+    resize: none;
+  }
+  &__button-upload {
+    @include button-styling;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0 1rem;
+    
+  }
+  &__icon {
+    position: absolute;
+    left: 10px;
+  }
+  &__button-text {
+    @include labels-buttons;
+  }
+  &__cancel {
+    @include labels-buttons;
+    margin: 1rem auto;
+    text-align: center;
+    color: $primary-color;
+    border: none;
+    font-weight: 700;
+  }
+}

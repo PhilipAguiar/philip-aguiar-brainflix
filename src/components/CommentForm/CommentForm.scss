@@ -71,7 +71,7 @@
 
   &__label {
     @include labels-buttons;
-    font-size: .9rem;
+    font-size: 0.9rem;
     padding-bottom: 2px;
     color: $primary-neutral;
   }
@@ -90,7 +90,6 @@
     min-height: 30vw;
     width: 100%;
     margin-bottom: 1rem;
-    
 
     @include tablet {
       display: none;
@@ -100,27 +99,27 @@
       color: $primary-dark;
     }
 
-    &--tablet{
+    &--tablet {
       display: none;
 
-      @include tablet{
-        display:flex;
-        max-width:100%;
+      @include tablet {
+        display: flex;
+        max-width: 100%;
+        resize: none;
       }
-      
     }
   }
 
   &__button {
     @include button-styling;
     @include labels-buttons;
-    
+
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: .8rem 0;
+    padding: 0.8rem 0;
     font-weight: 700;
 
     @include tablet {

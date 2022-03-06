@@ -116,6 +116,7 @@
 @mixin button-styling {
   @include default-border-radius;
   @include labels-buttons;
+  height: 40px;
   padding-left: 32px;
   padding-right: 32px;
   background-color: $primary-color;
