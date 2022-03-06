@@ -7,13 +7,19 @@ function Upload() {
   return (
     <section className="upload">
       <h1 className="upload__title">UPLOAD VIDEO</h1>
-      <p className="upload__label upload__label--tablet">VIDEO THUMBNAIL</p>
-      <img className="upload__image" src={uploadImage}></img>
       <form className="upload__form">
-        <label className="upload__label">TITLE YOUR VIDEO</label>
-        <input className="upload__title-input" placeholder="Add a title to your video" />
-        <label className="upload__label">ADD A VIDEO DESCRIPTION</label>
-        <textarea className="upload__description-input" placeholder="Add a description to your video" />
+        <div className="upload__desktop-wrapper">
+          <div className="upload__image-wrapper">
+            <p className="upload__label upload__label--tablet">VIDEO THUMBNAIL</p>
+            <img className="upload__image" src={uploadImage}></img>
+          </div>
+          <div className="upload__input-wrapper">
+            <label className="upload__label upload__label--desktop">TITLE YOUR VIDEO</label>
+            <input className="upload__title-input" placeholder="Add a title to your video" />
+            <label className="upload__label">ADD A VIDEO DESCRIPTION</label>
+            <textarea className="upload__description-input" placeholder="Add a description to your video" />
+          </div>
+        </div>
         <button className="upload__button-publish">
           <img className="upload__icon" src={publishIcon} />
           <p className="upload__button-text">PUBLISH</p>
