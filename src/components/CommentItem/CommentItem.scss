@@ -5,6 +5,7 @@
   @include site-padding-mobile;
   @include component-padding-mobile;
   @include divider-styling;
+  position: relative;
   padding-top: 16px;
   display: flex;
 
@@ -33,12 +34,22 @@
     padding-bottom: 0.5rem;
 
     @include desktop {
-      margin-right: 3rem;
+      margin-left: 1rem;
+      margin-right: 2rem;
     }
   }
 
   &__image {
     @include avatar-styling;
+    min-width: 36px;
+    min-height: 36px;
+
+    &--active {
+      background-size: cover;
+      background-position: center;
+      background-position-x: -5px;
+      background-image: url(../../assets/Images/Mohan-muruge.jpg);
+    }
   }
 
   &__info-container {
@@ -46,17 +57,32 @@
   }
 
   &__user-wrapper {
-    @include component-padding-mobile;
+    padding-bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
   }
-  
+
   &__name {
+    @include subheader-mobile;
     font-weight: 700;
     color: $primary-dark;
   }
 
   &__date {
+    @include body-copy-mobile;
     color: $primary-neutral;
+  }
+
+  &__text {
+    @include body-copy-mobile;
+  }
+  &__delete {
+    @include site-padding-mobile;
+    cursor: pointer;
+    position: absolute;
+    height: 1.4rem;
+    bottom: 0.5rem;
+    right: -5px;
+
   }
 }

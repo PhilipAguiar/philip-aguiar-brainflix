@@ -11,7 +11,6 @@
 
   @include desktop {
     padding: 0;
-    // padding-right:1rem;
   }
 
   &__title {
@@ -20,10 +19,8 @@
     padding: 16px 0;
 
     @include tablet {
-      border: none;
-    }
-    @include desktop {
       @include page-header;
+      border: none;
     }
   }
 
@@ -38,6 +35,7 @@
       padding: 0 0 8px 0;
     }
   }
+
   &__info-wrapper {
     display: flex;
     flex-direction: column;
@@ -58,14 +56,12 @@
       flex-direction: row;
     }
   }
-  &__channel {
-  }
 
   &__stats-wrapper {
     display: flex;
 
     &--bottom {
-      padding-top: 5rem;
+      padding-top: 1rem;
 
       @include tablet {
         padding: 0;
@@ -76,6 +72,7 @@
   &__icon {
     padding-right: 0.5rem;
   }
+
   &__stat {
     @include body-copy-mobile;
     color: $primary-neutral;
@@ -83,6 +80,7 @@
     @include tablet {
       padding: 0;
     }
+
     @include desktop {
       @include body-copy;
     }
@@ -101,10 +99,11 @@
 
     &--tablet {
       @include tablet {
-        padding-right: 3rem;
+        padding-right: 1.5rem;
       }
     }
   }
+  
   &__text {
     @include component-padding;
     @include body-copy-mobile;
@@ -115,11 +114,11 @@
       padding-right: 2%;
     }
 
-    @include desktop{
+    @include desktop {
       font-size: 1rem;
       line-height: 24px;
       padding-top: 1.8rem;
-      padding-bottom: 4rem;
+      padding-bottom: 3rem;
     }
   }
 }

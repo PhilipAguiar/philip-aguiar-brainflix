@@ -13,13 +13,17 @@
     padding: 0 1rem 0 1.5rem;
     border-left: 1px $primary-neutral solid;
     width: 20%;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     padding-bottom: 6rem;
   }
 
   &__title {
-    @include heading-padding-mobile;
+    padding: 16px 0 8px;
     color: $primary-neutral;
+    
+    @include desktop {
+      padding-top: 0;
+    }
   }
 }

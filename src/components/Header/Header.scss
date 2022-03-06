@@ -1,4 +1,5 @@
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
 
 .header {
   @include component-padding-mobile;
@@ -24,7 +25,10 @@
     padding: 1rem 0;
 
     @include tablet {
-      padding-right: 14%;
+      padding: 0.5rem 14% 0.5rem;
+    }
+    @include desktop {
+      padding-left: 0;
     }
   }
 
@@ -41,6 +45,7 @@
       width: 100%;
     }
   }
+
   &__input {
     @include form-styling;
     background-image: url(../../assets/Images/search.svg);
@@ -63,7 +68,12 @@
       width: 20%;
       margin-right: 2rem;
     }
+
+    &::placeholder {
+      color: $secondary-dark;
+    }
   }
+
   &__avatar {
     @include avatar-styling;
     background-size: cover;
@@ -72,11 +82,14 @@
     background-image: url(../../assets/Images/Mohan-muruge.jpg);
 
     @include tablet {
-      margin-left: 2rem;
+      margin-left: 1.3rem;
     }
   }
+
   &__button {
     @include button-styling;
+    width: 100%;
+    height: 40px;
     display: flex;
     position: relative;
     justify-content: center;
@@ -93,10 +106,18 @@
 
       @include tablet {
         display: flex;
-        height: 100%;
+        height: 40px;
         width: 10rem;
       }
     }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+  
+  &__home {
+    margin: auto;
   }
 
   &__upload {

@@ -115,13 +115,16 @@
 
 @mixin button-styling {
   @include default-border-radius;
+  @include labels-buttons;
+  cursor: pointer;
+  height: 40px;
   padding-left: 32px;
   padding-right: 32px;
   background-color: $primary-color;
   color: $primary-light;
   border: 0;
 
-  @include tablet{
+  @include tablet {
     min-width: 150px;
   }
 
@@ -133,7 +136,9 @@
 // form fields
 
 @mixin form-styling {
+
   @include default-border-radius;
+  background-color: $secondary-light;
   outline: none;
   border: 1px solid $secondary-neutral;
   min-height: 36px;
@@ -144,7 +149,8 @@
     min-height: 40px;
     padding: 16px;
   }
-  &:active {
+  
+  &:focus {
     border: 2px solid $primary-color;
   }
 }

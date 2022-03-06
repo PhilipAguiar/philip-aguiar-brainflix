@@ -5,13 +5,13 @@
     max-height: 70vw;
     width: 100%;
 
-    @include tablet{
+    @include tablet {
       background-color: $secondary-dark;
-      max-height: 50vw;;
+      max-height: 50vw;
     }
 
-    @include desktop{
-      max-height: 40vw;;
+    @include desktop {
+      max-height: 37vw;
     }
   }
 }
