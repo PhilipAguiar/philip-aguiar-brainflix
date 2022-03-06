@@ -92,24 +92,18 @@
     min-height: 30vw;
     width: 100%;
     margin-bottom: 1rem;
-
-    @include tablet {
-      display: none;
+    resize: none;
+    overflow:hidden;
+    
+    @include tablet{
+      padding: 12px;
     }
 
     &::placeholder {
       color: $primary-dark;
     }
 
-    &--tablet {
-      display: none;
-
-      @include tablet {
-        display: flex;
-        max-width: 100%;
-        resize: none;
-      }
-    }
+   
   }
 
   &__button {

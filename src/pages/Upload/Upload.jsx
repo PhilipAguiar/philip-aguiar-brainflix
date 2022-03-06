@@ -4,7 +4,7 @@ import publishIcon from "../../assets/Images/publish.svg";
 import "./Upload.scss";
 
 function Upload({ routerProps }) {
-  console.log(routerProps);
+
   const history = routerProps.history;
   const clickHandler = (e) => {
     e.preventDefault();

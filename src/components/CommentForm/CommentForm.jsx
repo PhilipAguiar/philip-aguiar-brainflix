@@ -23,8 +23,6 @@ function CommentForm({ comments }) {
           <div className="post__comment-wrapper">
             <textarea name="comment" className="post__input" placeholder="Add a new comment"></textarea>
 
-            <input name="comment" className="post__input post__input--tablet" placeholder="Add a new comment"></input>
-
             <button className="post__button" onClick={cancelSubmit}>
               <img className="post__button-image" src={commentImage} alt="" />
               <p>COMMENT</p>
