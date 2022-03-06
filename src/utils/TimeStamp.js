@@ -24,7 +24,7 @@ const timeSince = (commentTime) => {
   let commentHour;
   let commentMinute;
   let commentSecond;
-debugger
+  
   if (splitDate.length > 3) {
     commentHour = splitDate[3];
     commentMinute = splitDate[4];

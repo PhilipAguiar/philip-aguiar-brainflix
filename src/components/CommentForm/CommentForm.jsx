@@ -1,11 +1,14 @@
 import "./CommentForm.scss";
 import commentImage from "../../assets/Images/add_comment.svg";
-import apiUtils from "../../utils/api";
+import { createRef } from "react";
 
-function CommentForm({ id,comments }) {
+function CommentForm({ id,comments,addNewComment }) {
+  const commentRef = createRef();
+
   const cancelSubmit = (e) => {
     e.preventDefault();
-    apiUtils.postComment(id,"test","testttt")
+    addNewComment(id,"BrainStation Man",commentRef.current.value)
+    commentRef.current.value = ""
   };
 
   return (
@@ -23,7 +26,7 @@ function CommentForm({ id,comments }) {
           </label>
         
           <div className="post__comment-wrapper">
-            <textarea name="comment" className="post__input" placeholder="Add a new comment"></textarea>
+            <textarea name="comment" className="post__input" ref={commentRef} placeholder="Add a new comment"></textarea>
 
             <button className="post__button" onClick={cancelSubmit}>
               <img className="post__button-image" src={commentImage} alt="" />

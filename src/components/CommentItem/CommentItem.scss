@@ -40,6 +40,12 @@
 
   &__image {
     @include avatar-styling;
+    &--active {
+      background-size: cover;
+      background-position: center;
+      background-position-x: -5px;
+      background-image: url(../../assets/Images/Mohan-muruge.jpg);
+    }
   }
 
   &__info-container {
@@ -62,7 +68,7 @@
     @include body-copy-mobile;
     color: $primary-neutral;
   }
-  
+
   &__text {
     @include body-copy-mobile;
   }

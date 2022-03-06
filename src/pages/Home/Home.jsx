@@ -51,6 +51,16 @@ class ActiveVideo extends Component {
     });
   };
 
+  addNewComment = (id,name,comment) => {
+    apiUtils.postComment(id,name,comment).then(response=>{
+      let newCommentList = [...this.state.commentList,response.data]
+      this.setState({
+        commentList: newCommentList,
+      })
+    })
+    
+  };
+
   componentDidUpdate(prevProps) {
     console.log(prevProps);
     const videoId = this.props.routerProps.match.params.id;
@@ -75,7 +85,7 @@ class ActiveVideo extends Component {
 
         <section className="activeVideo">
           <VideoDescription video={this.state.activeVideo} timestampConverter={timestampConverter} />
-          <CommentForm id={this.state.activeVideo.id} comments={this.state.commentList} />
+          <CommentForm id={this.state.activeVideo.id} comments={this.state.commentList} addNewComment={this.addNewComment}/>
           <CommentList comments={this.state.commentList} timestampConverter={timestampConverter} />
         </section>
 
