@@ -33,7 +33,7 @@ function Upload({ routerProps }) {
           <p className="upload__button-text">PUBLISH</p>
         </button>
         <div className="upload__wrapper">
-          <p className="upload__cancel">CANCEL</p>
+          <p className="upload__cancel" onClick={()=>console.log("cancel")}>CANCEL</p>
           <button className="upload__button-publish upload__button-publish--tablet" onClick={clickHandler}>
             <img className="upload__icon" src={publishIcon} />
             <p className="upload__button-text">PUBLISH</p>
