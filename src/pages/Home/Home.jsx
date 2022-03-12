@@ -50,18 +50,18 @@ class ActiveVideo extends Component {
     }).catch(error=>console.log(error));
   };
 
-  // addNewComment = (id,name,comment) => {
-  //   apiUtils.postComment(id,name,comment).then(()=>{
-  //     this.setActiveVideo(id)
-  //   }).catch(error=>console.log(error));
+  addNewComment = (id,name,comment) => {
+    apiUtils.postComment(id,name,comment).then(()=>{
+      this.setActiveVideo(id)
+    }).catch(error=>console.log(error));
     
-  // };
+  };
 
-  // deleteComment = (videoId,commentId) => {
-  //   apiUtils.deleteComment(videoId,commentId).then(()=>{
-  //     this.setActiveVideo(videoId)
-  //   }).catch(error=>console.log(error));
-  // }
+  deleteComment = (videoId,commentId) => {
+    apiUtils.deleteComment(videoId,commentId).then(()=>{
+      this.setActiveVideo(videoId)
+    }).catch(error=>console.log(error));
+  }
   
 
   componentDidUpdate(prevProps) {
