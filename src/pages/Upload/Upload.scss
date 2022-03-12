@@ -105,6 +105,8 @@
         padding-top: 36px;
       }
     }
+
+    
   }
 
   &__title-input {
@@ -127,6 +129,9 @@
     &::placeholder {
       color: $primary-dark;
     }
+    &--error{
+      @include form-error-styling
+    }
   }
 
   &__description-input {
@@ -137,6 +142,9 @@
     @include tablet {
       min-height: 9vh;
       margin-bottom: 2rem;
+    }
+    &--error{
+      @include form-error-styling
     }
   }
 
