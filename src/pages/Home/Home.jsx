@@ -87,7 +87,7 @@ class ActiveVideo extends Component {
         <HeroPlayer video={this.state.activeVideo} />
 
         <section className="activeVideo">
-          <VideoDescription video={this.state.activeVideo} timestampConverter={timestampConverter} />
+          <VideoDescription video={this.state.activeVideo} timestampConverter={timestampConverter} setActiveVideo={this.setActiveVideo}/>
           <CommentForm id={this.state.activeVideo.id} comments={this.state.activeVideo.comments} addNewComment={this.addNewComment}/>
           <CommentList videoId={this.state.activeVideo.id} comments={this.state.commentList} timestampConverter={timestampConverter} deleteComment={this.deleteComment}/>
         </section>

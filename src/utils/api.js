@@ -11,12 +11,14 @@ export default {
         name: newName,
         comment: newComment,
       }),
-    deleteComment: (video_id,comment_id) => axios
-    .delete(`${BASE_URL}/videos/${video_id}/comments/${comment_id}`),
+    deleteComment: (videoId,commentId) => axios
+    .delete(`${BASE_URL}/videos/${videoId}/comments/${commentId}`),
     postVideo: (title,description,image) => axios.post(`${BASE_URL}/videos`,{
       title: title,
       description: description,
       image: image,
-    }),  
+    }), 
+    addLike: (videoId) =>{axios.put(`${BASE_URL}/videos/${videoId}/likes`)},
+    
 
 }
