@@ -84,7 +84,7 @@ class ActiveVideo extends Component {
 
     return (
       <>
-        <HeroPlayer image={this.state.activeVideo.image} />
+        <HeroPlayer video={this.state.activeVideo} />
 
         <section className="activeVideo">
           <VideoDescription video={this.state.activeVideo} timestampConverter={timestampConverter} />
