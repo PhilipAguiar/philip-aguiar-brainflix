@@ -3,7 +3,7 @@
 @use "../../styles/partials/colors" as *;
 
 .upload {
-  @include site-padding-mobile;
+
 
   @include tablet {
     @include site-padding-tablet;
@@ -18,7 +18,8 @@
 
   &__title {
     @include page-header-mobile;
-    padding: 1.5rem 0;
+    border-top: 1px solid $secondary-neutral;
+    padding: 1.5rem 16px;
 
     @include tablet {
       @include page-header;
@@ -79,6 +80,7 @@
   }
 
   &__form {
+    @include site-padding-mobile;
     display: flex;
     flex-direction: column;
 
