@@ -17,14 +17,14 @@ const timeSince = (commentTime) => {
   const currentHour = currentDate.getHours();
   const currentMinute = currentDate.getMinutes();
   const currentSecond = currentDate.getSeconds();
-  const splitDate = commentTime.split("/").map(index => parseInt(index));
+  const splitDate = commentTime.split("/").map((index) => parseInt(index));
   const commentYear = splitDate[2];
   const commentMonth = splitDate[0];
   const commentDay = splitDate[1];
   let commentHour;
   let commentMinute;
   let commentSecond;
-  
+
   if (splitDate.length > 3) {
     commentHour = splitDate[3];
     commentMinute = splitDate[4];

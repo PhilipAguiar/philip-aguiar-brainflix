@@ -3,7 +3,7 @@
 @use "../../styles/partials/colors" as *;
 
 .upload {
-  @include site-padding-mobile;
+
 
   @include tablet {
     @include site-padding-tablet;
@@ -18,7 +18,8 @@
 
   &__title {
     @include page-header-mobile;
-    padding: 1.5rem 0;
+    border-top: 1px solid $secondary-neutral;
+    padding: 1.5rem 16px;
 
     @include tablet {
       @include page-header;
@@ -79,6 +80,7 @@
   }
 
   &__form {
+    @include site-padding-mobile;
     display: flex;
     flex-direction: column;
 
@@ -105,6 +107,8 @@
         padding-top: 36px;
       }
     }
+
+    
   }
 
   &__title-input {
@@ -127,6 +131,9 @@
     &::placeholder {
       color: $primary-dark;
     }
+    &--error{
+      @include form-error-styling
+    }
   }
 
   &__description-input {
@@ -137,6 +144,9 @@
     @include tablet {
       min-height: 9vh;
       margin-bottom: 2rem;
+    }
+    &--error{
+      @include form-error-styling
     }
   }
 

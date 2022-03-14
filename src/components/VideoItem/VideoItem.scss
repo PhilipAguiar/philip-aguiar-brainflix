@@ -13,7 +13,7 @@
 
   @include desktop {
     height: 4.5rem;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
   }
 
   &__image-wrapper {
@@ -35,26 +35,25 @@
     height: 100%;
     width: 100%;
   }
+  
   &__title {
-    font-size: .9rem;
+    font-size: 0.9rem;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
-    
   }
 
   &__channel {
     padding-bottom: 0.2rem;
-    font-size: .9rem;
+    font-size: 0.9rem;
 
     @include tablet {
       font-size: 1rem;
     }
-    
   }
-  
+
   &__link {
     text-decoration: none;
     color: $primary-dark;

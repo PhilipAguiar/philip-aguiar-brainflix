@@ -4,7 +4,6 @@ import upload from "../../assets/Images/upload.svg";
 import { NavLink } from "react-router-dom";
 
 function Header() {
-
   return (
     <section className="header">
       <NavLink className="header__home" to="/">
@@ -16,7 +15,7 @@ function Header() {
 
         <NavLink className="header__link" to="/upload">
           <button className="header__button header__button--tablet">
-            <img className="header__upload" src={upload} alt="upload icon"/>
+            <img className="header__upload" src={upload} alt="upload icon" />
 
             <p className="header__button-text">UPLOAD</p>
           </button>
@@ -27,7 +26,7 @@ function Header() {
 
       <NavLink className="header__link" to="/upload">
         <button className="header__button">
-          <img className="header__upload" src={upload} alt="upload"/>
+          <img className="header__upload" src={upload} alt="upload" />
           <p className="header__button-text">UPLOAD</p>
         </button>
       </NavLink>

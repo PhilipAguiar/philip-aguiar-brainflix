@@ -11,11 +11,15 @@
 
   @include tablet {
     @include component-padding;
-    @include site-padding-tablet;
+    padding-left:0 ;
+    padding-right: 0;
+    margin: 0 36px;
     padding-top: 24px;
   }
 
   @include desktop {
+    @include site-padding-tablet;
+    margin: 0;
     padding-left: 0;
   }
 
@@ -76,6 +80,7 @@
   &__text {
     @include body-copy-mobile;
   }
+  
   &__delete {
     @include site-padding-mobile;
     cursor: pointer;
@@ -83,6 +88,5 @@
     height: 1.4rem;
     bottom: 0.5rem;
     right: -5px;
-
   }
 }

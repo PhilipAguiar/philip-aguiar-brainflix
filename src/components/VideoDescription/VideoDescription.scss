@@ -70,7 +70,24 @@
   }
 
   &__icon {
-    padding-right: 0.5rem;
+    margin-right: 0.5rem;
+
+    &--heart {
+      cursor: pointer;
+      background-image: url(../../assets/Images/likes.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      min-height: 18px;
+      min-width: 18px;
+
+      &:hover {
+        background-image: url(../../assets/Images/likes-hover.svg);
+      }
+
+      &:active {
+        background-image: url(../../assets/Images/likes-active.svg);
+      }
+    }
   }
 
   &__stat {
@@ -103,7 +120,7 @@
       }
     }
   }
-  
+
   &__text {
     @include component-padding;
     @include body-copy-mobile;

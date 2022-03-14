@@ -1,16 +1,23 @@
 import axios from "axios";
 
-const BASE_URL = "https://project-2-api.herokuapp.com";
-const API_KEY = "7df8a143-9efa-4f6b-9de0-47e12f1b49c9";
-
+const BASE_URL = "http://localhost:8080";
 
 export default {
-    getAll: () => axios.get(`${BASE_URL}/videos?api_key=${API_KEY}`),
-    getVideoById: (id) => axios.get(`${BASE_URL}/videos/${id}?api_key=${API_KEY}`),
-    postComment: (id,newName,newComment) => axios.post(`${BASE_URL}/videos/${id}/comments?api_key=${API_KEY}`,{
-        name: newName,
-        comment: newComment,
-      }),
-    deleteComment: (video_id,comment_id) => axios
-    .delete(`${BASE_URL}/videos/${video_id}/comments/${comment_id}?api_key=${API_KEY}`)  
-}
+  getAll: () => axios.get(`${BASE_URL}/videos`),
+  getVideoById: (id) => axios.get(`${BASE_URL}/videos/${id}`),
+  postComment: (id, newName, newComment) =>
+    axios.post(`${BASE_URL}/videos/${id}/comments`, {
+      name: newName,
+      comment: newComment,
+    }),
+  deleteComment: (videoId, commentId) => axios.delete(`${BASE_URL}/videos/${videoId}/comments/${commentId}`),
+  postVideo: (title, description, image) =>
+    axios.post(`${BASE_URL}/videos`, {
+      title: title,
+      description: description,
+      image: image,
+    }),
+  addLike: (videoId) => {
+    axios.put(`${BASE_URL}/videos/${videoId}/likes`);
+  },
+};

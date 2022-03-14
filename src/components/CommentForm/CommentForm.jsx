@@ -9,10 +9,9 @@ class CommentForm extends Component {
 
   render() {
     const { id, comments, addNewComment } = this.props;
-    // id, comments, addNewComment
     const commentRef = createRef();
 
-    const cancelSubmit = (e) => {
+    const submitHandler = (e) => {
       e.preventDefault();
       if (commentRef.current.value === "") {
         this.setState({ error: true });
@@ -32,7 +31,7 @@ class CommentForm extends Component {
             <div className="post__image"></div>
           </div>
 
-          <form className="post__form">
+          <form className="post__form" onSubmit={submitHandler}>
             <label className="post__label" htmlFor="comment">
               Join the Conversation
             </label>
@@ -44,12 +43,10 @@ class CommentForm extends Component {
                 <textarea name="comment" className="post__input" ref={commentRef} placeholder="Add a new comment"></textarea>
               )}
 
-              <button className="post__button" onClick={cancelSubmit}>
-                <img className="post__button-image" src={commentImage} alt="" />
+              <button className="post__button">
+                <img className="post__button-image" src={commentImage} alt="post" />
                 <p>COMMENT</p>
               </button>
-
-              
             </div>
           </form>
         </div>
