@@ -9,7 +9,6 @@ class CommentForm extends Component {
 
   render() {
     const { id, comments, addNewComment } = this.props;
-    // id, comments, addNewComment
     const commentRef = createRef();
 
     const submitHandler = (e) => {
@@ -45,11 +44,9 @@ class CommentForm extends Component {
               )}
 
               <button className="post__button">
-                <img className="post__button-image" src={commentImage} alt="" />
+                <img className="post__button-image" src={commentImage} alt="post" />
                 <p>COMMENT</p>
               </button>
-
-              
             </div>
           </form>
         </div>

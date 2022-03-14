@@ -56,7 +56,7 @@ class Upload extends Component {
           <div className="upload__desktop-wrapper">
             <div className="upload__image-wrapper">
               <p className="upload__label upload__label--tablet">VIDEO THUMBNAIL</p>
-              <img className="upload__image" src={thumbnailImage} alt="upload icon"></img>
+              <img className="upload__image" src={thumbnailImage} alt="upload icon" />
             </div>
 
             <div className="upload__input-wrapper">

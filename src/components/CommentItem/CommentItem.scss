@@ -76,6 +76,7 @@
   &__text {
     @include body-copy-mobile;
   }
+  
   &__delete {
     @include site-padding-mobile;
     cursor: pointer;
@@ -83,6 +84,5 @@
     height: 1.4rem;
     bottom: 0.5rem;
     right: -5px;
-
   }
 }

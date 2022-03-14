@@ -15,57 +15,68 @@ class ActiveVideo extends Component {
   };
 
   componentDidMount() {
-    apiUtils.getAll().then((response) => {
-      this.setState({
-        videoList: response.data,
-      });
-      
-      if (this.props.routerProps.match.params.id) {
-        this.setActiveVideo(this.props.routerProps.match.params.id);
-      } else {
-        this.setActiveVideo(response.data[0].id);
-      }
-    }).catch(error=>console.log(error));
+    apiUtils
+      .getAll()
+      .then((response) => {
+        this.setState({
+          videoList: response.data,
+        });
+
+        if (this.props.routerProps.match.params.id) {
+          this.setActiveVideo(this.props.routerProps.match.params.id);
+        } else {
+          this.setActiveVideo(response.data[0].id);
+        }
+      })
+      .catch((error) => console.log(error));
   }
 
   setActiveVideo = (activeId) => {
     if (activeId) {
-      apiUtils.getVideoById(activeId).then((response) => {
-        this.setState({
-          activeVideo: response.data,
-          commentList:response.data.comments
-        });
-        
-      }).catch(error=>console.log(error));
+      apiUtils
+        .getVideoById(activeId)
+        .then((response) => {
+          this.setState({
+            activeVideo: response.data,
+            commentList: response.data.comments,
+          });
+        })
+        .catch((error) => console.log(error));
     } else {
       this.setDefaultVideo();
     }
   };
 
   setDefaultVideo = () => {
-    apiUtils.getVideoById(this.state.videoList[0].id).then((response) => {
-      this.setState({
-        activeVideo: response.data,
-      });
-    }).catch(error=>console.log(error));
+    apiUtils
+      .getVideoById(this.state.videoList[0].id)
+      .then((response) => {
+        this.setState({
+          activeVideo: response.data,
+        });
+      })
+      .catch((error) => console.log(error));
   };
 
-  addNewComment = (id,name,comment) => {
-    apiUtils.postComment(id,name,comment).then(()=>{
-      this.setActiveVideo(id)
-    }).catch(error=>console.log(error));
-    
+  addNewComment = (id, name, comment) => {
+    apiUtils
+      .postComment(id, name, comment)
+      .then(() => {
+        this.setActiveVideo(id);
+      })
+      .catch((error) => console.log(error));
   };
 
-  deleteComment = (videoId,commentId) => {
-    apiUtils.deleteComment(videoId,commentId).then(()=>{
-      this.setActiveVideo(videoId)
-    }).catch(error=>console.log(error));
-  }
-  
+  deleteComment = (videoId, commentId) => {
+    apiUtils
+      .deleteComment(videoId, commentId)
+      .then(() => {
+        this.setActiveVideo(videoId);
+      })
+      .catch((error) => console.log(error));
+  };
 
   componentDidUpdate(prevProps) {
-   
     const videoId = this.props.routerProps.match.params.id;
 
     if (prevProps.routerProps.match.params.id !== videoId) {
@@ -87,9 +98,14 @@ class ActiveVideo extends Component {
         <HeroPlayer video={this.state.activeVideo} />
 
         <section className="activeVideo">
-          <VideoDescription video={this.state.activeVideo} timestampConverter={timestampConverter} setActiveVideo={this.setActiveVideo}/>
-          <CommentForm id={this.state.activeVideo.id} comments={this.state.activeVideo.comments} addNewComment={this.addNewComment}/>
-          <CommentList videoId={this.state.activeVideo.id} comments={this.state.commentList} timestampConverter={timestampConverter} deleteComment={this.deleteComment}/>
+          <VideoDescription video={this.state.activeVideo} timestampConverter={timestampConverter} setActiveVideo={this.setActiveVideo} />
+          <CommentForm id={this.state.activeVideo.id} comments={this.state.activeVideo.comments} addNewComment={this.addNewComment} />
+          <CommentList
+            videoId={this.state.activeVideo.id}
+            comments={this.state.commentList}
+            timestampConverter={timestampConverter}
+            deleteComment={this.deleteComment}
+          />
         </section>
 
         <VideoList videoList={filteredVideoList} clickHandler={this.setActiveVideo} />

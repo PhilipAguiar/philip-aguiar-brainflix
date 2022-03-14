@@ -93,9 +93,9 @@
     width: 100%;
     margin-bottom: 1rem;
     resize: none;
-    overflow:hidden;
-    
-    @include tablet{
+    overflow: hidden;
+
+    @include tablet {
       padding: 12px;
     }
 
@@ -103,10 +103,9 @@
       color: $primary-dark;
     }
 
-    &--error{
+    &--error {
       border: 1px solid red;
     }
-   
   }
 
   &__button {
@@ -125,7 +124,7 @@
       margin-left: 3%;
     }
   }
-  
+
   &__button-image {
     position: absolute;
     left: 10px;

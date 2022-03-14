@@ -1,16 +1,13 @@
 import "./CommentItem.scss";
-import deleteImage from "../../assets/Images/delete_black_24dp.svg"
+import deleteImage from "../../assets/Images/delete_black_24dp.svg";
 
-function CommentItem({ commentObj, timestampConverter,videoId, avatar,deleteComment}) {
+function CommentItem({ commentObj, timestampConverter, videoId, avatar, deleteComment }) {
+  const { name, timestamp, comment, id } = commentObj;
 
-  const { name, timestamp, comment,id } = commentObj;
-  
   return (
     <div className="comment">
       <div className="comment__image-container">
-        {avatar ? 
-          <div className="comment__image comment__image--active"></div> : 
-          <div className="comment__image"></div>}
+        {avatar ? <div className="comment__image comment__image--active"></div> : <div className="comment__image"></div>}
       </div>
 
       <div className="comment__info-container">
@@ -21,9 +18,7 @@ function CommentItem({ commentObj, timestampConverter,videoId, avatar,deleteComm
         <p className="comment__text">{comment}</p>
       </div>
 
-      <img className="comment__delete" src={deleteImage} alt="delete" 
-      onClick={()=>deleteComment(videoId,id)} />
-
+      <img className="comment__delete" src={deleteImage} alt="delete" onClick={() => deleteComment(videoId, id)} />
     </div>
   );
 }
